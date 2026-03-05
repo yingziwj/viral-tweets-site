@@ -12,5 +12,10 @@
     "publisherId": "ca-pub-XXXXXXXXXXXXXXXX",
     "enabled": false,
     "reminder": "Apply for AdSense after 10+ quality posts and 2 weeks of content"
+  },
+  "analytics": {
+    "ga4": "",
+    "enabled": false,
+    "setupGuide": "1. Go to https://analytics.google.com 2. Create GA4 property 3. Copy Measurement ID (G-XXXXXXXXXX) 4. Paste it here"
   }
 }

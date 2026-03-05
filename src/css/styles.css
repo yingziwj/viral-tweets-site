@@ -66,7 +66,55 @@
   --transition-slow: 350ms ease;
   
   /* Container */
-  --container-max: 1200px;
+  --container-max: 1400px;
+}
+
+/* ========================================
+   PC Desktop Optimizations (Large Screens)
+   ======================================== */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+  }
+  
+  .feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1920px) {
+  :root {
+    --font-size-5xl: 4.5rem;
+    --font-size-4xl: 3rem;
+    --font-size-3xl: 2.25rem;
+  }
+  
+  .container {
+    max-width: 1600px;
+  }
+  
+  .section {
+    padding: 6rem 0;
+  }
 }
 
 /* Reset & Base */
@@ -151,6 +199,9 @@ ul, ol {
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-md) 0;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
 }
 
 .logo {
@@ -219,8 +270,9 @@ ul, ol {
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 0 var(--spacing-lg);
 }
 
 .hero h1 {
@@ -306,7 +358,7 @@ ul, ol {
 .section-title p {
   font-size: var(--font-size-lg);
   color: var(--color-gray-600);
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -839,7 +891,26 @@ ul, ol {
 }
 
 /* ========================================
-   Responsive Design
+   Responsive Design - Tablet
+   ======================================== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  .feature-grid,
+  .blog-grid,
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========================================
+   Responsive Design - Mobile
    ======================================== */
 @media (max-width: 768px) {
   :root {

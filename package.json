@@ -1,0 +1,25 @@
+{
+  "name": "viral-tweets-site",
+  "version": "1.0.0",
+  "description": "A complete static website about writing viral tweets on X (Twitter)",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "keywords": [
+    "twitter",
+    "viral tweets",
+    "social media",
+    "content creation",
+    "eleventy",
+    "static site"
+  ],
+  "author": "Viral Tweet Academy",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
+  }
+}

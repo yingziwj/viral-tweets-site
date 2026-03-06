@@ -1,0 +1,7 @@
+[2026-03-06 11:29:41] Starting content generation...
+⏰ Not in posting window. Next windows: 9-11 AM, 2-4 PM, 8-10 PM
+[2026-03-06 11:29:41] Content generation completed successfully
+[2026-03-06 11:29:41] Rebuilding site...
+env: node: No such file or directory
+[2026-03-06 11:29:41] ERROR: Site rebuild failed
+[2026-03-06 11:29:41] ---

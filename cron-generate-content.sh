@@ -4,8 +4,14 @@
 # This script is called by cron jobs to generate and publish content
 
 # Set up environment
-export PATH="/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin"
-export NODE_PATH="/usr/local/lib/node_modules"
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/share/npm/bin"
+export NODE_PATH="/opt/homebrew/lib/node_modules:/usr/local/lib/node_modules"
+export NVM_DIR="$HOME/.nvm"
+
+# Load nvm if available (for node/npm path resolution)
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+    . "$NVM_DIR/nvm.sh"
+fi
 
 # Project directory
 PROJECT_DIR="/Volumes/Extreme SSD/openclaw/webBot/viral-tweets-site"

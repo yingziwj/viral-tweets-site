@@ -53,8 +53,8 @@ should_post() {
         return
     fi
     
-    # Posting windows: 9-11 AM, 2-4 PM, 8-10 PM (Beijing time)
-    if [ "$current_hour" -ge 9 ] && [ "$current_hour" -lt 11 ]; then
+    # Posting windows: 9-12 AM, 2-4 PM, 8-10 PM (Beijing time)
+    if [ "$current_hour" -ge 9 ] && [ "$current_hour" -lt 12 ]; then
         echo "morning_slot"
     elif [ "$current_hour" -ge 14 ] && [ "$current_hour" -lt 16 ]; then
         echo "afternoon_slot"

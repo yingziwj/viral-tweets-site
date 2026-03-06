@@ -1,12 +1,13 @@
 ---
-title: "The Complete Guide to Twitter Threads That Go Viral"
+layout: base.njk
+title: "The Complete Guide to X (Twitter) Threads That Go Viral"
 date: 2024-02-05
-description: "Everything you need to know about writing viral Twitter threads. From structure to formatting, learn the exact framework used by top creators."
+description: "Everything you need to know about writing viral X (Twitter) threads. From structure to formatting, learn the exact framework used by top creators."
 readingTime: "10 min read"
 emoji: "🧵"
 ---
 
-Threads are the secret weapon of Twitter growth. A single viral thread can bring thousands of followers overnight.
+Threads are the secret weapon of X (Twitter) growth. A single viral thread can bring thousands of followers overnight.
 
 But most threads fail. They're rambling, poorly structured, or just plain boring.
 
@@ -16,7 +17,7 @@ This guide will teach you how to write threads that people actually want to read
 
 Before we dive into the how, let's understand the why:
 
-1. **Algorithm boost**: Twitter prioritizes threads in the timeline
+1. **Algorithm boost**: X (Twitter) prioritizes threads in the timeline
 2. **Deeper value**: You can explore topics thoroughly
 3. **Bookmark bait**: Long-form content gets saved more
 4. **Shareability**: Each tweet in the thread can be individually retweeted

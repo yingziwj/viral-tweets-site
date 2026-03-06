@@ -36,8 +36,8 @@ description: Get in touch with Viral Tweet Academy. Questions, suggestions, or c
         </div>
         
         <div class="form-group">
-          <label for="twitter">Twitter Handle (optional)</label>
-          <input type="text" id="twitter" name="twitter" placeholder="@yourhandle">
+          <label for="X">X (Twitter) Handle (optional)</label>
+          <input type="text" id="X" name="X" placeholder="@yourhandle">
         </div>
         
         <div class="form-group">
@@ -72,9 +72,9 @@ description: Get in touch with Viral Tweet Academy. Questions, suggestions, or c
       
       <div class="feature-card" style="text-align: center;">
         <div class="feature-icon">🐦</div>
-        <h3>Twitter / X</h3>
+        <h3>X (Twitter) / X</h3>
         <p>Follow us for daily tips and updates</p>
-        <a href="https://twitter.com/viraltweetacademy" target="_blank" rel="noopener" class="tool-link">@viraltweetacademy</a>
+        <a href="https://X.com/viraltweetacademy" target="_blank" rel="noopener" class="tool-link">@viraltweetacademy</a>
       </div>
       
       <div class="feature-card" style="text-align: center;">
@@ -122,7 +122,7 @@ description: Get in touch with Viral Tweet Academy. Questions, suggestions, or c
       
       <div style="background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--radius-md); margin-bottom: var(--spacing-md); box-shadow: var(--shadow-sm);">
         <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm); color: var(--color-gray-900);">Do you offer consulting?</h3>
-        <p style="color: var(--color-gray-700);">Yes, we offer one-on-one consulting for Twitter growth strategy. Contact us for rates and availability.</p>
+        <p style="color: var(--color-gray-700);">Yes, we offer one-on-one consulting for X (Twitter) growth strategy. Contact us for rates and availability.</p>
       </div>
       
     </div>

@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Tools
-description: Essential tools and resources for writing viral tweets on X (Twitter). From scheduling to analytics, find everything you need.
+description: Essential tools and resources for writing viral tweets on X (X (Twitter)). From scheduling to analytics, find everything you need.
 ---
 
 <section class="section">
@@ -31,7 +31,7 @@ description: Essential tools and resources for writing viral tweets on X (Twitte
       <div class="tool-card">
         <span class="tool-tag">Scheduling</span>
         <h3>Typefully</h3>
-        <p>Built specifically for Twitter threads. Write, schedule, and analyze with Twitter-first features.</p>
+        <p>Built specifically for X (Twitter) threads. Write, schedule, and analyze with X (Twitter)-first features.</p>
         <a href="https://typefully.com" target="_blank" rel="noopener" class="tool-link">Visit Typefully →</a>
       </div>
       
@@ -45,9 +45,9 @@ description: Essential tools and resources for writing viral tweets on X (Twitte
       <!-- Analytics Tools -->
       <div class="tool-card">
         <span class="tool-tag">Analytics</span>
-        <h3>Twitter Analytics</h3>
-        <p>Free native analytics from Twitter. Track impressions, engagements, and follower growth.</p>
-        <a href="https://analytics.twitter.com" target="_blank" rel="noopener" class="tool-link">Visit Analytics →</a>
+        <h3>X (Twitter) Analytics</h3>
+        <p>Free native analytics from X (Twitter). Track impressions, engagements, and follower growth.</p>
+        <a href="https://analytics.X.com" target="_blank" rel="noopener" class="tool-link">Visit Analytics →</a>
       </div>
       
       <div class="tool-card">
@@ -60,7 +60,7 @@ description: Essential tools and resources for writing viral tweets on X (Twitte
       <div class="tool-card">
         <span class="tool-tag">Analytics</span>
         <h3>Social Blade</h3>
-        <p>Track statistics for any Twitter account. Compare growth and estimate earnings.</p>
+        <p>Track statistics for any X (Twitter) account. Compare growth and estimate earnings.</p>
         <a href="https://socialblade.com" target="_blank" rel="noopener" class="tool-link">Visit Social Blade →</a>
       </div>
       
@@ -68,7 +68,7 @@ description: Essential tools and resources for writing viral tweets on X (Twitte
       <div class="tool-card">
         <span class="tool-tag">Design</span>
         <h3>Canva</h3>
-        <p>Create stunning visuals for your tweets. Templates optimized for Twitter dimensions.</p>
+        <p>Create stunning visuals for your tweets. Templates optimized for X (Twitter) dimensions.</p>
         <a href="https://canva.com" target="_blank" rel="noopener" class="tool-link">Visit Canva →</a>
       </div>
       
@@ -173,7 +173,7 @@ description: Essential tools and resources for writing viral tweets on X (Twitte
       <div style="background: var(--color-white); padding: var(--spacing-xl); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
         <h3 style="color: var(--color-success); margin-bottom: var(--spacing-lg);">🆓 Free Stack</h3>
         <ul style="list-style: disc; padding-left: var(--spacing-xl); color: var(--color-gray-700); line-height: 2;">
-          <li>Twitter Analytics (native)</li>
+          <li>X (Twitter) Analytics (native)</li>
           <li>Canva (free tier)</li>
           <li>Unsplash (always free)</li>
           <li>Buffer (free for 3 channels)</li>

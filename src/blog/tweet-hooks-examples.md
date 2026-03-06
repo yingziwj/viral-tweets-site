@@ -1,4 +1,5 @@
 ---
+layout: base.njk
 title: "10 Tweet Hooks That Stop the Scroll (With Examples)"
 date: 2024-01-22
 description: "Master the art of the hook with these 10 proven tweet opening lines. Each example shows exactly how to grab attention in the first 3 words."
@@ -88,7 +89,7 @@ Implies insider knowledge. Creates FOMO.
 > Nobody tells you this about [topic]:
 
 **Examples:**
-> Nobody tells you this about Twitter growth: Your first 100 followers matter more than your first 10,000.
+> Nobody tells you this about X (Twitter) growth: Your first 100 followers matter more than your first 10,000.
 > 
 > Nobody tells you this about viral tweets: They're usually written in under 5 minutes.
 
@@ -154,7 +155,7 @@ Calls out a specific audience. Creates instant relevance.
 **Examples:**
 > If you're stuck at 500 followers, read this:
 > 
-> If you're a founder trying to grow on Twitter, this thread is for you:
+> If you're a founder trying to grow on X (Twitter), this thread is for you:
 
 **Why it works:** Highly targeted. Readers feel personally addressed.
 
@@ -170,7 +171,7 @@ Promises honesty in a world of fluff. Builds trust immediately.
 **Examples:**
 > Here's the truth about going viral: It's less about luck and more about volume.
 > 
-> Here's the truth about Twitter growth: Boring consistency beats exciting inconsistency.
+> Here's the truth about X (Twitter) growth: Boring consistency beats exciting inconsistency.
 
 **Why it works:** Positions you as honest and trustworthy. Cuts through noise.
 

@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Tips
-description: Essential tips and strategies for writing viral tweets on X (Twitter). Learn from proven techniques used by top creators.
+description: Essential tips and strategies for writing viral tweets on X (X (Twitter)). Learn from proven techniques used by top creators.
 ---
 
 <section class="section">
@@ -65,7 +65,7 @@ description: Essential tips and strategies for writing viral tweets on X (Twitte
       
       <div class="tip-card">
         <h3><span class="tip-number">11</span>Write Like You Speak</h3>
-        <p>Conversational tone wins on Twitter. Use short sentences. Contractions are fine. Write how you'd explain something to a friend. Authenticity beats perfection.</p>
+        <p>Conversational tone wins on X (Twitter). Use short sentences. Contractions are fine. Write how you'd explain something to a friend. Authenticity beats perfection.</p>
       </div>
       
       <div class="tip-card">

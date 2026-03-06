@@ -1,18 +1,19 @@
 ---
-title: "Twitter Algorithm Explained: How to Game the System (Ethically)"
+layout: base.njk
+title: "X (Twitter) Algorithm Explained: How to Game the System (Ethically)"
 date: 2024-02-19
-description: "Decode Twitter's algorithm and learn how to optimize your content for maximum reach. No black-hat tricks—just smart, ethical strategies."
+description: "Decode X (Twitter)'s algorithm and learn how to optimize your content for maximum reach. No black-hat tricks—just smart, ethical strategies."
 readingTime: "9 min read"
 emoji: "🤖"
 ---
 
-Understanding Twitter's algorithm is like having a cheat code for growth. You don't need to work harder—you need to work smarter.
+Understanding X (Twitter)'s algorithm is like having a cheat code for growth. You don't need to work harder—you need to work smarter.
 
 In this post, I'll break down exactly how the algorithm works and share ethical strategies to maximize your reach.
 
-## How Twitter's Algorithm Works (2024)
+## How X (Twitter)'s Algorithm Works (2024)
 
-Twitter uses a combination of machine learning models to decide what shows up in your feed. Here are the key ranking signals:
+X (Twitter) uses a combination of machine learning models to decide what shows up in your feed. Here are the key ranking signals:
 
 ### Primary Ranking Factors:
 
@@ -39,7 +40,7 @@ Tweets from accounts you interact with regularly get priority.
 **5. Content Type**
 - Threads get boosted
 - Tweets with images/videos perform better
-- Native content (posted on Twitter) beats external links
+- Native content (posted on X (Twitter)) beats external links
 
 **6. User History**
 What you've engaged with before predicts what you'll engage with next.
@@ -52,7 +53,7 @@ The first 60 minutes after posting determine your tweet's fate.
 
 ### What Happens:
 
-1. **Minutes 0-15:** Twitter shows your tweet to a small sample of followers
+1. **Minutes 0-15:** X (Twitter) shows your tweet to a small sample of followers
 2. **Minutes 15-30:** Based on initial engagement, decides whether to show more
 3. **Minutes 30-60:** If engagement is strong, pushes to broader audience
 4. **Hour 1-24:** Continued distribution based on ongoing engagement
@@ -112,7 +113,7 @@ The first 60 minutes after posting determine your tweet's fate.
 - Each tweet in the thread can be individually engaged with
 - More engagement signals = more distribution
 
-**Why:** Threads keep people on the platform longer (Twitter's goal).
+**Why:** Threads keep people on the platform longer (X (Twitter)'s goal).
 
 ---
 
@@ -134,7 +135,7 @@ The first 60 minutes after posting determine your tweet's fate.
 **What:** Post when your specific audience is most active.
 
 **How:**
-- Check Twitter Analytics → "Top Tweets"
+- Check X (Twitter) Analytics → "Top Tweets"
 - Note when your best-performing tweets were posted
 - Double down on those times
 
@@ -196,7 +197,7 @@ The first 60 minutes after posting determine your tweet's fate.
 Avoid these behaviors:
 
 ### ❌ Engagement Pods
-Twitter can detect artificial engagement patterns. Pods can get you shadowbanned.
+X (Twitter) can detect artificial engagement patterns. Pods can get you shadowbanned.
 
 ### ❌ Follow/Unfollow
 Looks spammy. Hurts your credibility score.
@@ -264,7 +265,7 @@ Based on testing, these formats consistently perform well:
 
 Before posting, ask:
 
-- [ ] Is this tweet native to Twitter (no external links)?
+- [ ] Is this tweet native to X (Twitter) (no external links)?
 - [ ] Does it include a visual (if applicable)?
 - [ ] Will it spark conversation?
 - [ ] Is it posted during peak hours?
@@ -305,7 +306,7 @@ Master these, and the algorithm becomes your ally.
 
 ---
 
-**Want more algorithm insights?** Follow [@viraltweetacademy](https://twitter.com/viraltweetacademy) for daily tips.
+**Want more algorithm insights?** Follow [@viraltweetacademy](https://X.com/viraltweetacademy) for daily tips.
 
 **What's your biggest algorithm question?** Drop it below—I'll answer in a future post.
 

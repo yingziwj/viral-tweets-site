@@ -1,4 +1,5 @@
 ---
+layout: base.njk
 title: "The Psychology Behind Viral Tweets: What Makes People Share?"
 date: 2024-01-15
 description: "Understanding the psychological triggers that make tweets go viral. Learn the science behind shareability and how to apply it to your content."
@@ -23,7 +24,7 @@ People share things that make them look good. When someone retweets your content
 - Frame insights as exclusive or early-access information
 
 **Example:**
-> "Most people don't know this, but Twitter's algorithm prioritizes replies within the first 15 minutes. Here's how to game it..."
+> "Most people don't know this, but X (Twitter)'s algorithm prioritizes replies within the first 15 minutes. Here's how to game it..."
 
 ### 2. Emotional Resonance
 
@@ -139,7 +140,7 @@ You have less than half a second to make an impression.
 ## Common Mistakes
 
 ### ❌ Being Too Generic
-> "Here are some tips for Twitter growth"
+> "Here are some tips for X (Twitter) growth"
 
 ### ✅ Being Specific
 > "Here are 7 exact tweet templates I used to gain 50K followers"
@@ -171,6 +172,6 @@ Master these triggers, and you'll dramatically increase your chances of creating
 
 ---
 
-**Want more?** Follow [@viraltweetacademy](https://twitter.com/viraltweetacademy) for daily tips on writing tweets that resonate.
+**Want more?** Follow [@viraltweetacademy](https://X.com/viraltweetacademy) for daily tips on writing tweets that resonate.
 
 **What's your favorite viral tweet?** Drop it in the replies—I'd love to analyze it.

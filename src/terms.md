@@ -42,7 +42,7 @@ description: Terms of Service for Viral Tweet Academy. Please read these terms c
       
       <p>The content on this Site is for educational and informational purposes only. The strategies, tips, and advice provided are based on the author's experience and research. Results may vary, and we do not guarantee any specific outcomes from implementing the information on this Site.</p>
       
-      <p>Specifically regarding Twitter/X growth:</p>
+      <p>Specifically regarding X (Twitter)/X growth:</p>
       <ul>
         <li>We do not guarantee follower counts or engagement rates</li>
         <li>Individual results depend on many factors including effort, niche, and timing</li>
@@ -113,7 +113,7 @@ description: Terms of Service for Viral Tweet Academy. Please read these terms c
       <p>If you have any questions about these Terms, please contact us:</p>
       <ul>
         <li><strong>Email:</strong> <a href="mailto:legal@viraltweetacademy.com">legal@viraltweetacademy.com</a></li>
-        <li><strong>Twitter:</strong> <a href="https://twitter.com/viraltweetacademy">@viraltweetacademy</a></li>
+        <li><strong>X (Twitter):</strong> <a href="https://X.com/viraltweetacademy">@viraltweetacademy</a></li>
       </ul>
 
       <hr style="margin: var(--spacing-2xl) 0; border: none; border-top: 1px solid var(--color-gray-200);">

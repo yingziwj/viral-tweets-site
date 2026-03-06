@@ -1,12 +1,13 @@
 ---
-title: "From 0 to 10K Followers: A Realistic Twitter Growth Roadmap"
+layout: base.njk
+title: "From 0 to 10K Followers: A Realistic X (Twitter) Growth Roadmap"
 date: 2024-03-01
-description: "A step-by-step roadmap to grow from zero to 10,000 followers on Twitter. Real strategies, realistic timelines, and no BS."
+description: "A step-by-step roadmap to grow from zero to 10,000 followers on X (Twitter). Real strategies, realistic timelines, and no BS."
 readingTime: "12 min read"
 emoji: "📈"
 ---
 
-Growing on Twitter isn't about luck. It's about strategy, consistency, and understanding the game.
+Growing on X (Twitter) isn't about luck. It's about strategy, consistency, and understanding the game.
 
 I've helped dozens of creators grow from zero to 10K+ followers. This roadmap is the exact framework I use.
 
@@ -14,7 +15,7 @@ Let's be clear: This takes work. But it's achievable for anyone willing to put i
 
 ## The Growth Phases
 
-Twitter growth happens in distinct phases. Each requires different strategies.
+X (Twitter) growth happens in distinct phases. Each requires different strategies.
 
 ```
 Phase 1: 0-100 followers   (Foundation)
@@ -47,7 +48,7 @@ Let's break down each phase.
 **2. Follow Strategically**
 - Follow 20-30 accounts in your niche
 - Mix of big accounts (100K+) and mid-tier (10K-50K)
-- Don't mass follow—Twitter will flag you
+- Don't mass follow—X (Twitter) will flag you
 
 **3. Engage, Don't Post (Yet)**
 - Spend 30-60 minutes daily replying to others
@@ -152,9 +153,9 @@ Identify 3-5 topics you'll consistently tweet about:
 - Something people associate with you
 
 **5. Cross-Promote**
-- Share your Twitter on other platforms
-- Add Twitter link to email signature
-- Mention Twitter in podcasts, interviews, etc.
+- Share your X (Twitter) on other platforms
+- Add X (Twitter) link to email signature
+- Mention X (Twitter) in podcasts, interviews, etc.
 
 ### Growth Hacks at This Stage:
 
@@ -200,7 +201,7 @@ Co-author threads with creators in your space → Tap into each other's audience
 **4. Diversify Content**
 - Add more visuals (charts, screenshots)
 - Experiment with video
-- Try Twitter Spaces for live audio
+- Try X (Twitter) Spaces for live audio
 
 **5. Monetization (Optional)**
 - Newsletter
@@ -336,7 +337,7 @@ Here's your action plan:
 
 1. **Consistency beats perfection.** Posting daily > posting perfectly once a week.
 
-2. **Engagement is everything.** Twitter is a social network. Be social.
+2. **Engagement is everything.** X (Twitter) is a social network. Be social.
 
 3. **Value compounds.** Every good tweet is an asset that can attract followers for years.
 
@@ -354,6 +355,6 @@ Growth is the result of small actions, repeated daily.
 
 **Questions?** Drop them below. I read every reply.
 
-**Want accountability?** Follow [@viraltweetacademy](https://twitter.com/viraltweetacademy) and RT this to commit publicly.
+**Want accountability?** Follow [@viraltweetacademy](https://X.com/viraltweetacademy) and RT this to commit publicly.
 
 Let's grow together. 🚀

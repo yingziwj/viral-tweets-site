@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Blog
-description: Latest insights, strategies, and tips for writing viral tweets on X (Twitter). Updated regularly with fresh content.
+description: Latest insights, strategies, and tips for writing viral tweets on X (X (Twitter)). Updated regularly with fresh content.
 eleventyExcludeFromCollections: true
 ---
 

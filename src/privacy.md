@@ -111,7 +111,7 @@ description: Privacy Policy for Viral Tweet Academy. Learn how we collect, use, 
       <p>If you have questions about this Privacy Policy, please contact us:</p>
       <ul>
         <li><strong>Email:</strong> <a href="mailto:privacy@viraltweetacademy.com">privacy@viraltweetacademy.com</a></li>
-        <li><strong>Twitter:</strong> <a href="https://twitter.com/viraltweetacademy">@viraltweetacademy</a></li>
+        <li><strong>X (Twitter):</strong> <a href="https://X.com/viraltweetacademy">@viraltweetacademy</a></li>
       </ul>
 
       <hr style="margin: var(--spacing-2xl) 0; border: none; border-top: 1px solid var(--color-gray-200);">

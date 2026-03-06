@@ -1,12 +1,12 @@
 {
   "site": {
     "title": "Viral Tweet Hub",
-    "description": "Master the art of writing viral tweets on X (Twitter). Learn proven strategies, tips, and techniques to grow your audience and create content that resonates.",
+    "description": "Master the art of writing viral tweets on X (X (Twitter)). Learn proven strategies, tips, and techniques to grow your audience and create content that resonates.",
     "url": "https://viraltweethub.pages.dev",
     "author": "Viral Tweet Hub",
-    "twitter": "@viraltweethub",
+    "X": "@viraltweethub",
     "logo": "/images/logo.png",
-    "keywords": "viral tweets, twitter marketing, x platform, social media growth, tweet writing, content creation, twitter tips, tweet hacks, twitter algorithm"
+    "keywords": "viral tweets, X marketing, x platform, social media growth, tweet writing, content creation, X tips, tweet hacks, X algorithm"
   },
   "adsense": {
     "publisherId": "ca-pub-XXXXXXXXXXXXXXXX",

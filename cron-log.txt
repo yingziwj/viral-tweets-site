@@ -5,3 +5,59 @@
 env: node: No such file or directory
 [2026-03-06 11:29:41] ERROR: Site rebuild failed
 [2026-03-06 11:29:41] ---
+[2026-03-06 11:31:23] Starting content generation...
+🚀 Posting slot: morning_slot
+📝 Creating new post: 5 Tweet Hooks That Stop the Scroll Every Time
+🎨 Style: conversational
+
+> viral-tweets-site@1.0.0 build
+> eleventy
+
+[11ty] Writing _site/blog/0-to-10k-followers-roadmap/index.html from ./src/blog/0-to-10k-followers-roadmap.md (njk)
+[11ty] Writing _site/blog/twitter-threads-guide/index.html from ./src/blog/twitter-threads-guide.md (njk)
+[11ty] Writing _site/blog/tweet-hooks-examples/index.html from ./src/blog/tweet-hooks-examples.md (njk)
+[11ty] Writing _site/blog/post-20260306-113123/index.html from ./src/blog/post-20260306-113123.md (njk)
+[11ty] Writing _site/blog/twitter-algorithm-guide/index.html from ./src/blog/twitter-algorithm-guide.md (njk)
+[11ty] Writing _site/blog/psychology-viral-tweets/index.html from ./src/blog/psychology-viral-tweets.md (njk)
+[11ty] Writing _site/blog/post-20260306-113011/index.html from ./src/blog/post-20260306-113011.md (njk)
+[11ty] Writing _site/examples/index.html from ./src/examples.md (njk)
+[11ty] Writing _site/contact/index.html from ./src/contact.md (njk)
+[11ty] Writing _site/privacy/index.html from ./src/privacy.md (njk)
+[11ty] Writing _site/terms/index.html from ./src/terms.md (njk)
+[11ty] Writing _site/tools/index.html from ./src/tools.md (njk)
+[11ty] Writing _site/tips/index.html from ./src/tips.md (njk)
+[11ty] Writing _site/index.html from ./src/index.md (njk)
+[11ty] Writing _site/blog/index.html from ./src/blog/index.md (njk)
+[11ty] Copied 2 files / Wrote 15 files in 0.31 seconds (20.7ms each, v2.0.1)
+✅ Post created: post-20260306-113123.md
+🌐 Site rebuilt successfully
+
+Next steps:
+1. Review and edit the post if needed
+2. Add relevant images
+3. Commit and push to trigger Cloudflare Pages deploy
+✅ Content published successfully
+[2026-03-06 11:31:23] Content generation completed successfully
+[2026-03-06 11:31:23] Rebuilding site...
+
+> viral-tweets-site@1.0.0 build
+> eleventy
+
+[11ty] Writing _site/blog/0-to-10k-followers-roadmap/index.html from ./src/blog/0-to-10k-followers-roadmap.md (njk)
+[11ty] Writing _site/blog/tweet-hooks-examples/index.html from ./src/blog/tweet-hooks-examples.md (njk)
+[11ty] Writing _site/blog/twitter-threads-guide/index.html from ./src/blog/twitter-threads-guide.md (njk)
+[11ty] Writing _site/blog/twitter-algorithm-guide/index.html from ./src/blog/twitter-algorithm-guide.md (njk)
+[11ty] Writing _site/blog/psychology-viral-tweets/index.html from ./src/blog/psychology-viral-tweets.md (njk)
+[11ty] Writing _site/blog/post-20260306-113011/index.html from ./src/blog/post-20260306-113011.md (njk)
+[11ty] Writing _site/blog/post-20260306-113123/index.html from ./src/blog/post-20260306-113123.md (njk)
+[11ty] Writing _site/privacy/index.html from ./src/privacy.md (njk)
+[11ty] Writing _site/index.html from ./src/index.md (njk)
+[11ty] Writing _site/terms/index.html from ./src/terms.md (njk)
+[11ty] Writing _site/tips/index.html from ./src/tips.md (njk)
+[11ty] Writing _site/tools/index.html from ./src/tools.md (njk)
+[11ty] Writing _site/blog/index.html from ./src/blog/index.md (njk)
+[11ty] Writing _site/examples/index.html from ./src/examples.md (njk)
+[11ty] Writing _site/contact/index.html from ./src/contact.md (njk)
+[11ty] Copied 2 files / Wrote 15 files in 0.19 seconds (12.7ms each, v2.0.1)
+[2026-03-06 11:31:23] Site rebuild completed
+[2026-03-06 11:31:23] ---

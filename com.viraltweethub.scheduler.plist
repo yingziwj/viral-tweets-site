@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.viraltweethub.scheduler</string>
+    
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>sleep 30 && /Volumes/Extreme\ SSD/openclaw/webBot/viral-tweets-site/content-scheduler.sh run</string>
+    </array>
+    
+    <key>WorkingDirectory</key>
+    <string>/Volumes/Extreme SSD/openclaw/webBot/viral-tweets-site</string>
+    
+    <key>StandardOutPath</key>
+    <string>/Volumes/Extreme SSD/openclaw/webBot/viral-tweets-site/launchagent-log.txt</string>
+    
+    <key>StandardErrorPath</key>
+    <string>/Volumes/Extreme SSD/openclaw/webBot/viral-tweets-site/launchagent-error.txt</string>
+    
+    <key>RunAtLoad</key>
+    <true/>
+    
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Hour</key>
+            <integer>9</integer>
+            <key>Minute</key>
+            <integer>30</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>14</integer>
+            <key>Minute</key>
+            <integer>30</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>20</integer>
+            <key>Minute</key>
+            <integer>30</integer>
+        </dict>
+    </array>
+    
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/share/npm/bin</string>
+        <key>NVM_DIR</key>
+        <string>/Users/wjjava/.nvm</string>
+    </dict>
+</dict>
+</plist>

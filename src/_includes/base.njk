@@ -121,7 +121,15 @@
 
   <!-- Main Content -->
   <main id="main-content">
+    {% if page.url and '/blog/' in page.url and page.url != '/blog/' %}
+    <div class="container">
+      <article class="post-content">
+        {{ content | safe }}
+      </article>
+    </div>
+    {% else %}
     {{ content | safe }}
+    {% endif %}
   </main>
 
   <!-- Footer -->

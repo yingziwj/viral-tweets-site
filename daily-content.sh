@@ -401,20 +401,25 @@ if [ -z "$POST_TITLE" ]; then
     POST_TITLE=${TITLES[$RANDOM % ${#TITLES[@]}]}
 fi
 
-# Generate filename from title (handle both English and Chinese)
-if echo "$POST_TITLE" | grep -q "[\u4e00-\u9fff]"; then
-    # Chinese title - use timestamp
-    FILENAME="post-$(date +%Y%m%d-%H%M%S).md"
-else
-    # English title - slugify
-    FILENAME=$(echo "$POST_TITLE" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -cd '[:alnum:]-')
-    FILENAME="${FILENAME}.md"
-fi
+# Generate filename from title (slugify for SEO-friendly URLs)
+# Remove special characters, convert to lowercase, replace spaces with hyphens
+FILENAME=$(echo "$POST_TITLE" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -cd '[:alnum:]-')
 
-# Check if post already exists
+# Remove consecutive hyphens
+FILENAME=$(echo "$FILENAME" | sed 's/--*/-/g')
+
+# Remove leading/trailing hyphens
+FILENAME=$(echo "$FILENAME" | sed 's/^-//;s/-$//')
+
+# Add .md extension
+FILENAME="${FILENAME}.md"
+
+# Handle duplicate filenames by appending timestamp
 if [ -f "${BLOG_DIR}/${FILENAME}" ]; then
-    echo "❌ Post already exists: ${FILENAME}"
-    exit 1
+    BASENAME="${FILENAME%.md}"
+    TIMESTAMP=$(date +%H%M%S)
+    FILENAME="${BASENAME}-${TIMESTAMP}.md"
+    echo "⚠️  File exists, using: ${FILENAME}"
 fi
 
 # Generate content

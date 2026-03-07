@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1DA1F2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d8dd9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#grad1)"/>
+  <!-- Rocket -->
+  <path d="M32 12 L42 32 L32 52 L22 32 Z" fill="#fff"/>
+  <circle cx="32" cy="28" r="4" fill="#ff6b6b"/>
+  <!-- Fire -->
+  <path d="M28 52 L32 60 L36 52 Z" fill="#ffa500"/>
+  <!-- Stars -->
+  <circle cx="18" cy="20" r="2" fill="#fff" opacity="0.6"/>
+  <circle cx="46" cy="18" r="1.5" fill="#fff" opacity="0.4"/>
+  <circle cx="50" cy="35" r="1" fill="#fff" opacity="0.5"/>
+</svg>

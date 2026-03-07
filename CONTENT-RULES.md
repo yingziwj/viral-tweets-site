@@ -7,6 +7,24 @@
 
 ## ❌ 已发生的严重错误（绝不再犯！）
 
+### 错误 #0: 品牌名称不一致（Twitter vs X）
+**问题:** 内容中使用 "Twitter" 而不是 "X (Twitter)"  
+**影响:** 品牌不一致，显得不专业，SEO 混乱  
+**根本原因:** 没有统一的品牌名称替换规则
+
+**✅ 解决方案:**
+- 所有内容中的 "Twitter" 必须替换为 "X (Twitter)"
+- 包括：标题、描述、正文、标签
+- 在生成内容后自动执行 sed 替换
+
+**替换规则:**
+```bash
+sed -i '' 's/Twitter/X (Twitter)/g' "$FILE"
+sed -i '' 's/twitter/X (Twitter)/g' "$FILE"
+```
+
+---
+
 ### 错误 #1: 卡片标题和摘要为空
 **问题:** 文章没有 frontmatter，导致博客列表页显示空标题和空描述  
 **影响:** 网站看起来像半成品，严重影响用户体验和 SEO  
@@ -127,6 +145,16 @@ if ! grep -q "^description:" "$FILE"; then
     echo "❌ 缺少 description"
     exit 1
 fi
+
+# ✅ 品牌一致性检查：确保没有孤立的 "Twitter"（应该是 "X (Twitter)"）
+if grep -q "[Tt]witter" "$FILE"; then
+    # Check if it's properly formatted as "X (Twitter)"
+    if grep -q "Twitter)" "$FILE"; then
+        echo "✅ Brand consistency: X (Twitter) format verified"
+    else
+        echo "⚠️  Warning: Found 'Twitter' without 'X' prefix"
+    fi
+fi
 ```
 
 ### 步骤 4: 构建和部署
@@ -158,6 +186,7 @@ update_state "publishedTitles" "$POST_TITLE"
 - [ ] Frontmatter 完整（layout, title, date, description, readingTime, emoji）
 - [ ] 标题唯一（检查 publishedTitles 和现有文件）
 - [ ] 描述非空且有意义（15-25 个单词）
+- [ ] **品牌一致性：所有 "Twitter" → "X (Twitter)"**
 - [ ] 内容应用了样式（访问完整页面验证）
 - [ ] 构建成功（检查 _site 目录）
 - [ ] 状态文件已更新

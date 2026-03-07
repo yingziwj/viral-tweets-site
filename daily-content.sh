@@ -498,7 +498,18 @@ echo "🎨 Style: ${RANDOM_STYLE}"
 echo "📊 Emoji: ${RANDOM_EMOJI}"
 echo "⏱️  Reading time: ${RANDOM_READING_TIME}"
 
-generate_content "$POST_TITLE" "$RANDOM_STYLE" "$DESCRIPTION" "$RANDOM_EMOJI" "$RANDOM_READING_TIME" > "${BLOG_DIR}/${FILENAME}"
+# Generate content to temp file first
+TEMP_FILE=$(mktemp)
+generate_content "$POST_TITLE" "$RANDOM_STYLE" "$DESCRIPTION" "$RANDOM_EMOJI" "$RANDOM_READING_TIME" > "$TEMP_FILE"
+
+# ✅ CRITICAL RULE: Replace all "Twitter" with "X (Twitter)" for brand consistency
+# This applies to: title, description, and all content
+echo "🔄 Applying brand consistency: Twitter → X (Twitter)"
+sed -i '' 's/Twitter/X (Twitter)/g' "$TEMP_FILE"
+sed -i '' 's/twitter/X (Twitter)/g' "$TEMP_FILE"
+
+# Move to final location
+mv "$TEMP_FILE" "${BLOG_DIR}/${FILENAME}"
 
 # Update state file to track published titles (prevent future duplicates)
 if [ -f "$STATE_FILE" ]; then

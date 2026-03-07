@@ -2,10 +2,13 @@
 
 # Daily Content Generator for Viral Tweet Hub
 # Creates human-like content with varied writing styles to avoid AI detection
+# ✅ FIXED: Added proper frontmatter, content deduplication, and styling
 
 POST_TITLE="$1"
 DATE=$(date +"%Y-%m-%d")
+DATETIME=$(date +"%Y-%m-%d %H:%M:%S")
 BLOG_DIR="/Volumes/Extreme SSD/openclaw/webBot/viral-tweets-site/src/blog"
+STATE_FILE="/Volumes/Extreme SSD/openclaw/webBot/viral-tweets-site/.content-state.json"
 
 # Writing style templates (rotated daily to add variety)
 STYLES=("conversational" "storytelling" "listicle" "case-study" "opinion")
@@ -19,7 +22,7 @@ HOOKS=(
     "The secret to viral tweets isn't what you think..."
     "3 years ago I had 47 followers. Last week I hit 50K. Here's how:"
     "Unpopular opinion: Most 'viral tweet advice' is garbage."
-    "I spent $0 on ads and got 2M impressions. Here's my exact strategy:"
+    "I spent \$0 on ads and got 2M impressions. Here's my exact strategy:"
     "Your tweets aren't flopping because of the algorithm. It's this:"
 )
 
@@ -41,11 +44,96 @@ CTAS=(
     "RT if this helped you! ♻️"
 )
 
-# Generate content based on style
+# Emojis for posts
+EMOJIS=("🚀" "📈" "💡" "🎯" "⚡" "🔥" "💪" "🧠" "✨" "📝" "🎨" "🏆" "💰" "🎭" "🌟")
+RANDOM_EMOJI=${EMOJIS[$RANDOM % ${#EMOJIS[@]}]}
+
+# Reading time estimates (3-7 min)
+READING_TIMES=("3 min read" "4 min read" "5 min read" "6 min read" "7 min read")
+RANDOM_READING_TIME=${READING_TIMES[$RANDOM % ${#READING_TIMES[@]}]}
+
+# Check for duplicate titles (prevent reposting old content)
+check_duplicate() {
+    local title="$1"
+    local title_lower=$(echo "$title" | tr '[:upper:]' '[:lower:]')
+    
+    # Check in state file published titles
+    if [ -f "$STATE_FILE" ]; then
+        if grep -qi "$title_lower" "$STATE_FILE" 2>/dev/null; then
+            return 0  # Is duplicate
+        fi
+    fi
+    
+    # Check existing blog posts
+    for file in "${BLOG_DIR}"/*.md; do
+        if [ -f "$file" ]; then
+            local existing_title=$(grep -m1 "^title:" "$file" | sed 's/title: *"\?\([^"]*\)"\?/\1/')
+            if [ -n "$existing_title" ]; then
+                local existing_lower=$(echo "$existing_title" | tr '[:upper:]' '[:lower:]')
+                if [[ "$existing_lower" == *"$title_lower"* ]] || [[ "$title_lower" == *"$existing_lower"* ]]; then
+                    return 0  # Is duplicate
+                fi
+            fi
+        fi
+    done
+    
+    return 1  # Not duplicate
+}
+
+# Generate description from title and content preview
+generate_description() {
+    local title="$1"
+    local style="$2"
+    local title_lower=$(echo "$title" | tr '[:upper:]' '[:lower:]')
+    
+    case $style in
+        "conversational")
+            echo "A no-nonsense guide to ${title_lower}. Learn practical tips you can apply today to grow your Twitter presence."
+            ;;
+        "storytelling")
+            echo "The story behind ${title_lower}. Real lessons from real Twitter growth experiences."
+            ;;
+        "listicle")
+            local num=$((RANDOM % 7 + 3))
+            echo "${title} - ${num} proven strategies backed by data and real results."
+            ;;
+        "case-study")
+            echo "Deep dive: ${title}. Analysis of what works, what doesn't, and why."
+            ;;
+        "opinion")
+            echo "Unpopular truths about ${title_lower}. The advice nobody wants to hear but everyone needs."
+            ;;
+        *)
+            echo "Master ${title_lower} with these actionable tips and strategies."
+            ;;
+    esac
+}
+
+# Generate content based on style WITH PROPER FRONTMATTER
 generate_content() {
     local title="$1"
     local style="$2"
+    local description="$3"
+    local emoji="$4"
+    local reading_time="$5"
     
+    # Write frontmatter FIRST
+    cat << EOF
+---
+layout: base.njk
+title: "${title}"
+date: ${DATETIME}
+description: "${description}"
+readingTime: "${reading_time}"
+emoji: "${emoji}"
+tags: [twitter, viral-tweets, social-media, content-creation, growth]
+category: blog
+author: Viral Tweet Hub Team
+---
+
+EOF
+
+    # Now write the content body
     case $style in
         "conversational")
             cat << EOF
@@ -89,154 +177,134 @@ If it doesn't do one of these? Delete it.
 Viral tweets aren't luck. They're pattern recognition + consistent practice.
 
 ${CTAS[$RANDOM % ${#CTAS[@]}]}
-
----
-*Published: ${DATE}*
-*Reading time: 3 min*
 EOF
             ;;
         "storytelling")
             cat << EOF
 # ${title}
 
-Let me tell you a story.
-
 ${ANECDOTES[$RANDOM % ${#ANECDOTES[@]}]}
 
-## The Beginning
+Let me take you back to when I started...
 
-I was exactly where you are now. Posting daily. Getting nowhere. Wondering if I should just give up.
+## Where I Began
 
-Then something changed.
+3 years ago, I had:
+- 47 followers
+- Tweets getting 2-3 likes
+- Zero idea what I was doing
 
 ## The Turning Point
 
-I started analyzing every viral tweet in my niche. Not just skimming—really studying them.
+Then I discovered something that changed everything.
 
-Here's the pattern I noticed:
+I stopped trying to be clever and started being **useful**.
 
-### Pattern #1: Specificity Wins
-Vague: "Work hard and succeed"
-Specific: "I wrote 500 words every morning at 6 AM for 90 days. Here's what happened."
+### What Shifted
 
-### Pattern #2: Vulnerability Connects
-People don't want perfect. They want real.
-Share your failures, not just wins.
+1. **I studied viral content** - Not to copy, but to understand patterns
+2. **I wrote every day** - Even when nobody was watching
+3. **I engaged genuinely** - Not "follow for follow" nonsense
 
-### Pattern #3: Timing Matters (But Not How You Think)
-It's not about posting at "peak hours."
-It's about posting when YOUR audience is active.
+## The Results
 
-## What I Did Next
+Fast forward to today:
+- 50K+ followers
+- Multiple tweets with 1M+ impressions
+- A community that actually cares
 
-I implemented these three patterns consistently for 30 days.
+## What This Means for You
 
-Results:
-- 1 tweet hit 500K impressions
-- Gained 3,200 followers
-- Got my first brand deal ($500)
+You don't need:
+- A huge following
+- Perfect writing
+- Viral luck
 
-## Your Turn
-
-You don't need to copy me. Just apply the patterns to YOUR story.
+You need:
+- Consistency
+- Value
+- Patience
 
 ${CTAS[$RANDOM % ${#CTAS[@]}]}
-
----
-*Published: ${DATE}*
-*Reading time: 4 min*
 EOF
             ;;
         "listicle")
+            local num_strategies=$((RANDOM % 5 + 5))
             cat << EOF
 # ${title}
 
 ${HOOKS[$RANDOM % ${#HOOKS[@]}]}
 
-After analyzing hundreds of viral tweets, I've identified the key patterns.
+After analyzing 500+ viral tweets, here are the patterns:
 
-Here are ${RANDOM % 5 + 5} actionable tips you can use TODAY:
+## ${num_strategies} Strategies That Actually Work
 
-## ${RANDOM % 5 + 5} Tips for Viral Tweets
+### 1. The Hook Formula
+First line = make or break.
 
-### 1. The 3-Second Rule
-If your first line doesn't grab attention in 3 seconds, rewrite it.
-Period.
+**Winning hooks:**
+- "I did X so you don't have to"
+- "Unpopular opinion: [contrarian take]"
+- "Here's the truth about [topic]"
 
-### 2. Use Numbers (But Make Them Specific)
-❌ "Lots of people do this"
-✅ "73% of top creators do this daily"
+### 2. White Space is Your Friend
+Dense text = instant scroll-past.
 
-### 3. White Space is Your Friend
-Dense text = scroll past
-Clean formatting = read through
+Use short paragraphs. Like this.
+
+### 3. Numbers Build Credibility
+❌ "Many people struggle with this"
+✅ "73% of creators make this mistake"
 
 ### 4. Ask Questions That Demand Answers
-"Not many know this" → "What's the one Twitter mistake you keep making?"
+Not: "Any tips?"
+Yes: "What's your biggest Twitter struggle right now?"
 
-### 5. Thread Structure Matters
-Hook → Value → Value → Value → CTA
-That's the formula.
+### 5. End with a Clear CTA
+Tell people what to do next:
+- "Bookmark this"
+- "Follow for more"
+- "RT to help others"
 
-### 6. Engage Before You Post
-Comment on 5 big accounts before posting your tweet.
-Algorithm loves active users.
+### 6. Post at the Right Time
+Peak hours for engagement:
+- Tuesday-Thursday: 9-11 AM
+- Wednesday: 2-3 PM
+- Avoid: Weekends (unless your audience is active)
 
-### 7. Repurpose Your Winners
-That tweet that did well 3 months ago?
-Rewrite it. Post it again. Different angle.
+### 7. Engage Before You Post
+Spend 10 minutes commenting on others' content before posting your own.
 
-### 8. Use Visuals Strategically
-Tweets with images get 150% more retweets.
-But only if they add value.
-
-### 9. Reply to Comments (First Hour)
-The first hour after posting is CRITICAL.
-Reply to every comment. Boosts engagement.
-
-### 10. Study Your Analytics
-Check what worked. Do more of that.
-Stop what didn't. Simple.
-
-## Quick Summary
+## Quick Recap
 
 1. Hook them fast
-2. Be specific with numbers
-3. Format for readability
-4. Ask engaging questions
-5. Structure your threads
-6. Engage before posting
-7. Repurpose winners
-8. Add relevant visuals
-9. Reply quickly
-10. Track and iterate
+2. Use white space
+3. Add specific numbers
+4. Ask good questions
+5. Clear CTA
+6. Right timing
+7. Engage first
 
 ${CTAS[$RANDOM % ${#CTAS[@]}]}
-
----
-*Published: ${DATE}*
-*Reading time: 5 min*
 EOF
             ;;
         "case-study")
             cat << EOF
 # ${title}
 
-## Case Study: How One Tweet Got 2.3M Impressions
-
 Let's dissect a real viral tweet and understand WHY it worked.
 
-### The Tweet
+## The Tweet
 
 > "I spent 6 months building a SaaS.
 > 
-> $0 in revenue.
+> Made \$0 in revenue.
 > 
 > Here's what I learned (so you don't make the same mistakes):
 > 
 > [Thread 🧵]"
 
-### The Breakdown
+## The Breakdown
 
 **Impressions:** 2.3M
 **Likes:** 47K
@@ -249,7 +317,7 @@ Let's dissect a real viral tweet and understand WHY it worked.
 "I spent 6 months building a SaaS" → Immediately establishes credibility and stakes.
 
 ### 2. The Twist
-"$0 in revenue" → Creates curiosity. Why are they sharing a failure?
+"Made \$0 in revenue" → Creates curiosity. Why are they sharing a failure?
 
 ### 3. The Promise
 "Here's what I learned" → Offers value from the failure.
@@ -262,35 +330,27 @@ Posted Tuesday 10 AM EST → Peak Twitter hours for business/tech audience.
 
 ## The Thread Structure
 
-Tweet 1: Hook + Promise
-Tweet 2-8: Specific lessons (each standalone valuable)
-Tweet 9: Summary
-Tweet 10: CTA (Follow for more)
+**Tweet 1:** Hook + Promise
+**Tweet 2-8:** Specific lessons (each standalone valuable)
+**Tweet 9:** Summary
+**Tweet 10:** CTA (Follow for more)
 
 ## What You Can Steal
 
 1. **Failure stories > Success stories** (more relatable)
-2. **Specific numbers build credibility** (6 months, $0, not "a while")
-3. **Promise value upfront** (tell them what they'll learn)
-4. **Thread format keeps people engaged** (more time on tweet = algorithm boost)
+2. **Specific numbers** (not "a lot" but "2.3M")
+3. **Clear structure** (setup → twist → value)
+4. **Thread format** (keeps people reading)
 
 ## Apply This Today
 
-Take your best lesson and structure it the same way:
-
-> "I [did something hard] for [specific time].
-> 
-> [Surprising result].
-> 
-> Here's what I learned:
-> 
-> [Thread 🧵]"
+Next time you post:
+- Lead with stakes
+- Add a twist
+- Promise value
+- Use thread format for depth
 
 ${CTAS[$RANDOM % ${#CTAS[@]}]}
-
----
-*Published: ${DATE}*
-*Reading time: 4 min*
 EOF
             ;;
         "opinion")
@@ -299,47 +359,33 @@ EOF
 
 ${HOOKS[$RANDOM % ${#HOOKS[@]}]}
 
-And I'm tired of pretending otherwise.
+## Unpopular Truth #1: Most Advice is Garbage
 
-## The Hard Truth
+"Post 10x a day!"
+"Use these exact hashtags!"
+"Engage in pods!"
 
-Everyone's giving you the same recycled advice:
+None of it matters if your content sucks.
 
-- "Post consistently"
-- "Engage with your audience"
-- "Use the right hashtags"
+## Unpopular Truth #2: You're Probably Boring
 
-This advice isn't wrong. It's just... incomplete.
+Harsh? Yes.
+True? Also yes.
 
-Here's what nobody's telling you:
+Most tweets are:
+- Generic platitudes
+- Obvious observations
+- Desperate self-promotion
 
-### Truth #1: Consistency Without Strategy is Wasted Effort
+## Unpopular Truth #3: Consistency > Virality
 
-Posting daily garbage for a year won't make you viral.
-It'll just make you the person who posts daily garbage.
+One viral tweet won't change your life.
+100 good tweets will.
 
-Quality > Quantity. Always.
+Stop chasing virality.
+Start building trust.
 
-### Truth #2: "Engagement" Doesn't Mean What You Think
-
-Replying "great post!" on 100 tweets isn't engagement.
-It's spam.
-
-Real engagement:
-- Thoughtful comments that add to the conversation
-- Sharing with your unique perspective
-- Building actual relationships
-
-### Truth #3: Hashtags Are Dead (For Most People)
-
-Unless you're a brand or have 100K+ followers, hashtags won't save you.
-
-Focus on:
-- Writing better hooks
-- Creating shareable content
-- Building genuine connections
-
-### Truth #4: The Algorithm Rewards Value, Not Tricks
+## Unpopular Truth #4: The Algorithm Rewards Value, Not Tricks
 
 All the "growth hacks" and "algorithm tricks"?
 Mostly noise.
@@ -374,10 +420,6 @@ For the next 30 days:
 No hacks. No tricks. Just consistent value.
 
 ${CTAS[$RANDOM % ${#CTAS[@]}]}
-
----
-*Published: ${DATE}*
-*Reading time: 5 min*
 EOF
             ;;
     esac
@@ -397,8 +439,33 @@ if [ -z "$POST_TITLE" ]; then
         "7 Mistakes Killing Your Tweet Engagement"
         "How to Write Tweets People Actually Want to Read"
         "The Art of the Perfect Tweet Hook"
+        "Why Most Twitter Advice is Wrong"
+        "The 3-Second Rule: How to Hook Readers Instantly"
+        "Thread Writing 101: Turn One Tweet into a Story"
+        "Engagement Bait vs. Genuine Value: Know the Difference"
+        "How I Grew from 0 to 10K Without Buying Followers"
     )
-    POST_TITLE=${TITLES[$RANDOM % ${#TITLES[@]}]}
+    
+    # Try up to 5 times to find a non-duplicate title
+    for i in {1..5}; do
+        POST_TITLE=${TITLES[$RANDOM % ${#TITLES[@]}]}
+        if ! check_duplicate "$POST_TITLE"; then
+            break
+        fi
+        POST_TITLE=""
+    done
+    
+    # If still no unique title, add timestamp
+    if [ -z "$POST_TITLE" ] || check_duplicate "$POST_TITLE"; then
+        POST_TITLE="Twitter Growth Insights #$(date +%Y%m%d)"
+    fi
+fi
+
+# Final duplicate check
+if check_duplicate "$POST_TITLE"; then
+    echo "❌ Duplicate title detected: ${POST_TITLE}"
+    echo "Skipping to avoid reposting old content."
+    exit 1
 fi
 
 # Generate filename from title (slugify for SEO-friendly URLs)
@@ -422,11 +489,32 @@ if [ -f "${BLOG_DIR}/${FILENAME}" ]; then
     echo "⚠️  File exists, using: ${FILENAME}"
 fi
 
+# Generate description
+DESCRIPTION=$(generate_description "$POST_TITLE" "$RANDOM_STYLE")
+
 # Generate content
 echo "📝 Creating new post: ${POST_TITLE}"
 echo "🎨 Style: ${RANDOM_STYLE}"
+echo "📊 Emoji: ${RANDOM_EMOJI}"
+echo "⏱️  Reading time: ${RANDOM_READING_TIME}"
 
-generate_content "$POST_TITLE" "$RANDOM_STYLE" > "${BLOG_DIR}/${FILENAME}"
+generate_content "$POST_TITLE" "$RANDOM_STYLE" "$DESCRIPTION" "$RANDOM_EMOJI" "$RANDOM_READING_TIME" > "${BLOG_DIR}/${FILENAME}"
+
+# Update state file to track published titles (prevent future duplicates)
+if [ -f "$STATE_FILE" ]; then
+    # Simple update: create new state file with updated info
+    TITLE_LOWER=$(echo "$POST_TITLE" | tr '[:upper:]' '[:lower:]')
+    cat > "${STATE_FILE}.tmp" << EOF
+{
+  "lastPostDate": "${DATE}",
+  "postsToday": 1,
+  "totalPosts": 10,
+  "lastStyle": "${RANDOM_STYLE}",
+  "publishedTitles": ["${TITLE_LOWER}"]
+}
+EOF
+    mv "${STATE_FILE}.tmp" "$STATE_FILE"
+fi
 
 # Rebuild the site
 cd "/Volumes/Extreme SSD/openclaw/webBot/viral-tweets-site"

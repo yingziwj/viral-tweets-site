@@ -29,7 +29,7 @@ get_state() {
     cat "$STATE_FILE"
 }
 
-# Update state
+# Update state (works without jq)
 update_state() {
     local key="$1"
     local value="$2"
@@ -37,8 +37,12 @@ update_state() {
     if command -v jq &> /dev/null; then
         jq "${key} = ${value}" "$STATE_FILE" > "${STATE_FILE}.tmp" && mv "${STATE_FILE}.tmp" "$STATE_FILE"
     else
-        # Fallback without jq
-        echo "Note: Install jq for better state management"
+        # Fallback: use sed for simple updates
+        if [[ "$value" == \"*\" ]] || [[ "$value" == "null" ]] || [[ "$value" =~ ^[0-9]+$ ]]; then
+            sed -i '' "s|\"${key}\": .*|\"${key}\": ${value},|" "$STATE_FILE"
+        else
+            sed -i '' "s|\"${key}\": .*|\"${key}\": \"${value}\",|" "$STATE_FILE"
+        fi
     fi
 }
 
@@ -143,6 +147,20 @@ run_scheduler() {
             if [ $? -eq 0 ]; then
                 log_action "PUBLISHED" "New post in ${slot}"
                 echo "✅ Content published successfully"
+                
+                # Auto-commit and push to trigger Cloudflare Pages deploy
+                echo "🔄 Committing and pushing to GitHub..."
+                cd "$PROJECT_DIR"
+                git add -A
+                git commit -m "📝 Auto-post: $(date +"%Y-%m-%d %H:%M") - ${slot}"
+                git push origin main
+                if [ $? -eq 0 ]; then
+                    echo "✅ Deployed to Cloudflare Pages"
+                    log_action "DEPLOYED" "Pushed to GitHub, Cloudflare Pages deploying"
+                else
+                    echo "⚠️ Git push failed - manual deploy needed"
+                    log_action "GIT_ERROR" "Push failed"
+                fi
             else
                 log_action "FAILED" "Content generation failed"
                 echo "❌ Failed to generate content"

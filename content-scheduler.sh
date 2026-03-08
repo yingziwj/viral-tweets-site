@@ -49,15 +49,9 @@ update_state() {
 # Check if we should post (avoid overposting)
 should_post() {
     local current_hour=$(date +%H)
-    local current_day=$(date +%u)  # 1-7 (Monday-Sunday)
-    
-    # Don't post on Sundays (content review day)
-    if [ "$current_day" -eq 7 ]; then
-        echo "review_day"
-        return
-    fi
     
     # Posting windows: 9-12 AM, 2-4 PM, 8-10 PM (Beijing time)
+    # Now posting every day (no Sunday review day)
     if [ "$current_hour" -ge 9 ] && [ "$current_hour" -lt 12 ]; then
         echo "morning_slot"
     elif [ "$current_hour" -ge 14 ] && [ "$current_hour" -lt 16 ]; then

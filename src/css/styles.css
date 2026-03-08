@@ -795,6 +795,90 @@ ul, ol {
   margin-right: var(--spacing-xs);
 }
 
+/* Tools Page - Pricing Comparison */
+.pricing-comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.pricing-card.pricing-featured {
+  border: 2px solid var(--color-primary);
+}
+
+.pricing-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+}
+
+.pricing-list {
+  list-style: disc;
+  padding-left: var(--spacing-xl);
+  color: var(--color-gray-700);
+  line-height: 2;
+}
+
+.pricing-total {
+  margin-top: var(--spacing-lg);
+  color: var(--color-gray-600);
+  font-size: var(--font-size-lg);
+}
+
+.recommendation-box {
+  text-align: center;
+  margin-top: var(--spacing-2xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--spacing-lg);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-lg);
+}
+
+/* Tools Checklist */
+.checklist-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-md);
+}
+
+.checklist-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.checklist-item label {
+  flex: 1;
+  color: var(--color-gray-700);
+  cursor: pointer;
+  margin: 0;
+}
+
 /* ========================================
    Contact Page
    ======================================== */

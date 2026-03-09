@@ -92,3 +92,65 @@ Next steps:
 [11ty] Copied 15 files / Wrote 19 files in 0.27 seconds (14.2ms each, v2.0.1)
 [2026-03-08 10:26:26] Site rebuild completed
 [2026-03-08 10:26:26] ---
+[2026-03-08 23:31:19] Starting content generation...
+⏰ Not in posting window. Next windows: 9-11 AM, 2-4 PM, 8-10 PM
+[2026-03-08 23:31:19] Content generation completed successfully
+[2026-03-08 23:31:19] Rebuilding site...
+
+> viral-tweets-site@1.0.0 build
+> eleventy
+
+[11ty] Writing _site/blog/from-0-to-10k-a-realistic-twitter-growth-roadmap/index.html from ./src/blog/from-0-to-10k-a-realistic-twitter-growth-roadmap.md (njk)
+[11ty] Writing _site/blog/0-to-10k-followers-roadmap/index.html from ./src/blog/0-to-10k-followers-roadmap.md (njk)
+[11ty] Writing _site/blog/from-0-to-10k-a-realistic-twitter-growth-roadmap-215449/index.html from ./src/blog/from-0-to-10k-a-realistic-twitter-growth-roadmap-215449.md (njk)
+[11ty] Writing _site/blog/i-analyzed-500-viral-tweets-here-are-the-patterns/index.html from ./src/blog/i-analyzed-500-viral-tweets-here-are-the-patterns.md (njk)
+[11ty] Writing _site/blog/post-20260306-113123/index.html from ./src/blog/post-20260306-113123.md (njk)
+[11ty] Writing _site/blog/psychology-viral-tweets/index.html from ./src/blog/psychology-viral-tweets.md (njk)
+[11ty] Writing _site/blog/the-art-of-perfect-tweet-hook/index.html from ./src/blog/the-art-of-perfect-tweet-hook.md (njk)
+[11ty] Writing _site/blog/thread-writing-101-turn-one-tweet-into-a-story/index.html from ./src/blog/thread-writing-101-turn-one-tweet-into-a-story.md (njk)
+[11ty] Writing _site/blog/tweet-hooks-examples/index.html from ./src/blog/tweet-hooks-examples.md (njk)
+[11ty] Writing _site/blog/twitter-algorithm-guide/index.html from ./src/blog/twitter-algorithm-guide.md (njk)
+[11ty] Writing _site/blog/twitter-threads-guide/index.html from ./src/blog/twitter-threads-guide.md (njk)
+[11ty] Writing _site/blog/why-your-tweets-arent-getting-engagement-and-how-to-fix-it/index.html from ./src/blog/why-your-tweets-arent-getting-engagement-and-how-to-fix-it.md (njk)
+[11ty] Writing _site/contact/index.html from ./src/contact.md (njk)
+[11ty] Writing _site/examples/index.html from ./src/examples.md (njk)
+[11ty] Writing _site/privacy/index.html from ./src/privacy.md (njk)
+[11ty] Writing _site/index.html from ./src/index.html (njk)
+[11ty] Writing _site/terms/index.html from ./src/terms.md (njk)
+[11ty] Writing _site/tips/index.html from ./src/tips.md (njk)
+[11ty] Writing _site/tools/index.html from ./src/tools.njk
+[11ty] Writing _site/blog/index.html from ./src/blog/index.njk
+[11ty] Copied 15 files / Wrote 20 files in 0.61 seconds (30.5ms each, v2.0.1)
+[2026-03-08 23:31:19] Site rebuild completed
+[2026-03-08 23:31:19] ---
+[2026-03-08 23:42:28] Starting content generation...
+⏰ Not in posting window. Next windows: 9-11 AM, 2-4 PM, 8-10 PM
+[2026-03-08 23:42:28] Content generation completed successfully
+[2026-03-08 23:42:28] Rebuilding site...
+
+> viral-tweets-site@1.0.0 build
+> eleventy
+
+[11ty] Writing _site/blog/from-0-to-10k-a-realistic-twitter-growth-roadmap/index.html from ./src/blog/from-0-to-10k-a-realistic-twitter-growth-roadmap.md (njk)
+[11ty] Writing _site/blog/0-to-10k-followers-roadmap/index.html from ./src/blog/0-to-10k-followers-roadmap.md (njk)
+[11ty] Writing _site/blog/from-0-to-10k-a-realistic-twitter-growth-roadmap-215449/index.html from ./src/blog/from-0-to-10k-a-realistic-twitter-growth-roadmap-215449.md (njk)
+[11ty] Writing _site/blog/i-analyzed-500-viral-tweets-here-are-the-patterns/index.html from ./src/blog/i-analyzed-500-viral-tweets-here-are-the-patterns.md (njk)
+[11ty] Writing _site/blog/post-20260306-113123/index.html from ./src/blog/post-20260306-113123.md (njk)
+[11ty] Writing _site/blog/the-art-of-perfect-tweet-hook/index.html from ./src/blog/the-art-of-perfect-tweet-hook.md (njk)
+[11ty] Writing _site/blog/psychology-viral-tweets/index.html from ./src/blog/psychology-viral-tweets.md (njk)
+[11ty] Writing _site/blog/thread-writing-101-turn-one-tweet-into-a-story/index.html from ./src/blog/thread-writing-101-turn-one-tweet-into-a-story.md (njk)
+[11ty] Writing _site/blog/tweet-hooks-examples/index.html from ./src/blog/tweet-hooks-examples.md (njk)
+[11ty] Writing _site/blog/twitter-threads-guide/index.html from ./src/blog/twitter-threads-guide.md (njk)
+[11ty] Writing _site/blog/twitter-algorithm-guide/index.html from ./src/blog/twitter-algorithm-guide.md (njk)
+[11ty] Writing _site/blog/why-your-tweets-arent-getting-engagement-and-how-to-fix-it/index.html from ./src/blog/why-your-tweets-arent-getting-engagement-and-how-to-fix-it.md (njk)
+[11ty] Writing _site/contact/index.html from ./src/contact.md (njk)
+[11ty] Writing _site/examples/index.html from ./src/examples.md (njk)
+[11ty] Writing _site/index.html from ./src/index.html (njk)
+[11ty] Writing _site/privacy/index.html from ./src/privacy.md (njk)
+[11ty] Writing _site/terms/index.html from ./src/terms.md (njk)
+[11ty] Writing _site/tips/index.html from ./src/tips.md (njk)
+[11ty] Writing _site/tools/index.html from ./src/tools.njk
+[11ty] Writing _site/blog/index.html from ./src/blog/index.njk
+[11ty] Copied 15 files / Wrote 20 files in 0.34 seconds (17.0ms each, v2.0.1)
+[2026-03-08 23:42:28] Site rebuild completed
+[2026-03-08 23:42:28] ---

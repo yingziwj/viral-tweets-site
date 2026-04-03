@@ -53,24 +53,29 @@ READING_TIMES=("3 min read" "4 min read" "5 min read" "6 min read" "7 min read")
 RANDOM_READING_TIME=${READING_TIMES[$RANDOM % ${#READING_TIMES[@]}]}
 
 # Check for duplicate titles (prevent reposting old content)
+# ✅ FIXED: Use exact matching, not partial matching
 check_duplicate() {
     local title="$1"
     local title_lower=$(echo "$title" | tr '[:upper:]' '[:lower:]')
     
-    # Check in state file published titles
+    # Check in state file published titles (exact match)
     if [ -f "$STATE_FILE" ]; then
-        if grep -qi "$title_lower" "$STATE_FILE" 2>/dev/null; then
+        # Extract publishedTitles array and check for exact match
+        if grep -qi "\"${title_lower}\"" "$STATE_FILE" 2>/dev/null; then
+            echo "⚠️  Found in state file: ${title}"
             return 0  # Is duplicate
         fi
     fi
     
-    # Check existing blog posts
+    # Check existing blog posts (exact match on title)
     for file in "${BLOG_DIR}"/*.md; do
         if [ -f "$file" ]; then
             local existing_title=$(grep -m1 "^title:" "$file" | sed 's/title: *"\?\([^"]*\)"\?/\1/')
             if [ -n "$existing_title" ]; then
                 local existing_lower=$(echo "$existing_title" | tr '[:upper:]' '[:lower:]')
-                if [[ "$existing_lower" == *"$title_lower"* ]] || [[ "$title_lower" == *"$existing_lower"* ]]; then
+                # Exact match only (not partial)
+                if [ "$existing_lower" = "$title_lower" ]; then
+                    echo "⚠️  Found in blog files: ${title}"
                     return 0  # Is duplicate
                 fi
             fi
@@ -512,20 +517,46 @@ sed -i '' 's/twitter/X (Twitter)/g' "$TEMP_FILE"
 mv "$TEMP_FILE" "${BLOG_DIR}/${FILENAME}"
 
 # Update state file to track published titles (prevent future duplicates)
+# ✅ FIXED: Accumulate all published titles, don't overwrite
+TITLE_LOWER=$(echo "$POST_TITLE" | tr '[:upper:]' '[:lower:]')
+
 if [ -f "$STATE_FILE" ]; then
-    # Simple update: create new state file with updated info
-    TITLE_LOWER=$(echo "$POST_TITLE" | tr '[:upper:]' '[:lower:]')
-    cat > "${STATE_FILE}.tmp" << EOF
+    # Read existing publishedTitles array
+    EXISTING_TITLES=$(grep -o '"publishedTitles": \[.*\]' "$STATE_FILE" | sed 's/"publishedTitles": \[//;s/\]$//')
+    
+    # Check if title already exists in array (avoid duplicates in state file too)
+    if echo "$EXISTING_TITLES" | grep -qi "$TITLE_LOWER"; then
+        # Title already in state, don't add again
+        NEW_TITLES_ARRAY="$EXISTING_TITLES"
+    else
+        # Add new title to existing array
+        if [ -z "$EXISTING_TITLES" ] || [ "$EXISTING_TITLES" == "" ]; then
+            NEW_TITLES_ARRAY="\"${TITLE_LOWER}\""
+        else
+            NEW_TITLES_ARRAY="${EXISTING_TITLES}, \"${TITLE_LOWER}\""
+        fi
+    fi
+    
+    # Get other values from existing state
+    TOTAL_POSTS=$(grep -o '"totalPosts": [0-9]*' "$STATE_FILE" | grep -o '[0-9]*' || echo "0")
+    NEW_TOTAL=$((TOTAL_POSTS + 1))
+else
+    # No existing state file, start fresh
+    NEW_TITLES_ARRAY="\"${TITLE_LOWER}\""
+    NEW_TOTAL=1
+fi
+
+# Write updated state file
+cat > "${STATE_FILE}.tmp" << EOF
 {
   "lastPostDate": "${DATE}",
   "postsToday": 1,
-  "totalPosts": 10,
+  "totalPosts": ${NEW_TOTAL},
   "lastStyle": "${RANDOM_STYLE}",
-  "publishedTitles": ["${TITLE_LOWER}"]
+  "publishedTitles": [${NEW_TITLES_ARRAY}]
 }
 EOF
-    mv "${STATE_FILE}.tmp" "$STATE_FILE"
-fi
+mv "${STATE_FILE}.tmp" "$STATE_FILE"
 
 # Rebuild the site
 cd "/Volumes/Extreme SSD/openclaw/webBot/viral-tweets-site"

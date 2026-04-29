@@ -1,8 +1,8 @@
 ---
 layout: base.njk
-title: "The Carousel Format: Why Multi-Image Tweets Dominate X (X (Twitter))"
+title: "The Carousel Format: Why Multi-Image Tweets Dominate X (Twitter)"
 date: 2026-04-29 18:35:33
-description: "The story behind the carousel format: why multi-image tweets dominate x (X (Twitter)). Real lessons from real X (Twitter) growth experiences."
+description: "The story behind the carousel format: why multi-image tweets dominate X (Twitter). Real lessons from real X (Twitter) growth experiences."
 readingTime: "4 min read"
 emoji: "🔥"
 tags: [X (Twitter), viral-tweets, social-media, content-creation, growth]
@@ -10,7 +10,7 @@ category: blog
 author: Viral Tweet Hub Team
 ---
 
-# The Carousel Format: Why Multi-Image Tweets Dominate X (X (Twitter))
+# The Carousel Format: Why Multi-Image Tweets Dominate X (Twitter)
 
 This changed everything for me after months of posting into the void...
 

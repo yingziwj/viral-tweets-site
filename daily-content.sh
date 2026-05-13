@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Daily Content Generator for Viral Tweet Hub
-# Creates human-like content with varied writing styles to avoid AI detection
-# ✅ FIXED: Added proper frontmatter, content deduplication, and styling
+# Creates editorial drafts that must be reviewed for originality and usefulness before publishing
+# Fixed: Added proper frontmatter, content deduplication, and styling
 
 POST_TITLE="$1"
 DATE=$(date +"%Y-%m-%d")
@@ -134,6 +134,9 @@ emoji: "${emoji}"
 tags: [twitter, viral-tweets, social-media, content-creation, growth]
 category: blog
 author: Viral Tweet Hub Team
+draft: true
+permalink: false
+eleventyExcludeFromCollections: true
 ---
 
 EOF

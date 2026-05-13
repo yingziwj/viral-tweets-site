@@ -1,5 +1,5 @@
 /**
- * Viral Tweet Academy - Main JavaScript
+ * Viral Tweet Hub - Main JavaScript
  * Handles mobile menu, smooth scrolling, and interactive features
  */
 
@@ -164,16 +164,27 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const toc = document.createElement('nav');
     toc.className = 'table-of-contents';
-    toc.innerHTML = `
-      <h4>Table of Contents</h4>
-      <ul>
-        ${Array.from(headings).map(h => `
+    const tocItems = Array.from(headings).map(h => {
+      if (!h.id) {
+        h.id = h.textContent
+          .toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, '')
+          .trim()
+          .replace(/\s+/g, '-');
+      }
+      return `
           <li>
-            <a href="#${h.id || h.textContent.toLowerCase().replace(/\s+/g, '-')}">
+            <a href="#${h.id}">
               ${h.textContent}
             </a>
           </li>
-        `).join('')}
+        `;
+    }).join('');
+
+    toc.innerHTML = `
+      <h4>Table of Contents</h4>
+      <ul>
+        ${tocItems}
       </ul>
     `;
     
@@ -189,14 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   createTOC();
   
-  // Ad slot placeholder click handler (for development)
-  document.querySelectorAll('.ad-slot').forEach(slot => {
-    slot.addEventListener('click', function() {
-      console.log('Ad slot clicked - integrate with AdSense');
-    });
-  });
-  
-  console.log('Viral Tweet Academy initialized');
+  console.log('Viral Tweet Hub initialized');
 });
 
 // Service Worker registration for PWA (optional)

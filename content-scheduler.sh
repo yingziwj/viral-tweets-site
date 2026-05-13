@@ -2,7 +2,7 @@
 
 # Content Scheduler for Viral Tweet Hub
 # Manages daily content generation and publishing
-# Designed to avoid AI detection through varied styles and human editing
+# Drafts must be reviewed for originality, accuracy, and usefulness before publishing.
 
 PROJECT_DIR="/Volumes/Extreme SSD/openclaw/webBot/viral-tweets-site"
 BLOG_DIR="${PROJECT_DIR}/src/blog"
@@ -63,7 +63,7 @@ should_post() {
     fi
 }
 
-# Generate content with human-like variations
+# Generate an editorial draft for human review
 generate_human_content() {
     local style="$1"
     local topic="$2"
@@ -74,14 +74,17 @@ generate_human_content() {
     
     cat << EOF
 ---
-layout: post
+layout: base.njk
 title: "${topic}"
 date: ${timestamp}
 author: Viral Tweet Hub Team
 tags: [twitter, viral-tweets, social-media, content-creation]
 category: blog
 readingTime: $((${RANDOM} % 3 + 3)) min
-humanEdited: true
+draft: true
+permalink: false
+eleventyExcludeFromCollections: true
+humanEdited: false
 lastReviewed: ${timestamp}
 ---
 
@@ -133,28 +136,14 @@ run_scheduler() {
             log_action "WAITING" "Outside posting window"
             ;;
         *)
-            echo "🚀 Posting slot: ${slot}"
+            echo "📝 Drafting slot: ${slot}"
             
             # Generate a new post
             "${PROJECT_DIR}/daily-content.sh"
             
             if [ $? -eq 0 ]; then
-                log_action "PUBLISHED" "New post in ${slot}"
-                echo "✅ Content published successfully"
-                
-                # Auto-commit and push to trigger Cloudflare Pages deploy
-                echo "🔄 Committing and pushing to GitHub..."
-                cd "$PROJECT_DIR"
-                git add -A
-                git commit -m "📝 Auto-post: $(date +"%Y-%m-%d %H:%M") - ${slot}"
-                git push origin main
-                if [ $? -eq 0 ]; then
-                    echo "✅ Deployed to Cloudflare Pages"
-                    log_action "DEPLOYED" "Pushed to GitHub, Cloudflare Pages deploying"
-                else
-                    echo "⚠️ Git push failed - manual deploy needed"
-                    log_action "GIT_ERROR" "Push failed"
-                fi
+                log_action "DRAFTED" "New draft in ${slot}"
+                echo "✅ Draft created. Review, expand, and remove draft frontmatter before publishing."
             else
                 log_action "FAILED" "Content generation failed"
                 echo "❌ Failed to generate content"

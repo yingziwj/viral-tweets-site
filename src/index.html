@@ -1,58 +1,48 @@
 ---
 layout: base.njk
 title: Home
-description: Master the art of writing viral tweets on X (X (Twitter)). Learn proven strategies, tips, and techniques to grow your audience and create content that resonates.
+description: "Learn practical frameworks for writing clearer posts on X (Twitter): hooks, threads, engagement diagnostics, profile positioning, and analytics."
 features:
   - icon: "📈"
-    title: "Grow Your Audience"
-    description: "Learn how to attract engaged followers who genuinely care about your content and message."
+    title: "Clarify Your Message"
+    description: "Turn rough ideas into posts readers can understand, save, and discuss."
   - icon: "💡"
-    title: "Share Your Ideas"
-    description: "Amplify your voice and reach millions with content that resonates and gets shared."
+    title: "Build Repeatable Systems"
+    description: "Use practical checklists for hooks, threads, content calendars, and analytics."
   - icon: "🎯"
-    title: "Build Authority"
-    description: "Establish yourself as a thought leader in your niche with consistent viral content."
+    title: "Earn Trust"
+    description: "Publish useful examples, honest lessons, and consistent points of view."
   - icon: "💰"
-    title: "Monetize Your Presence"
-    description: "Turn your X (Twitter) following into income through sponsorships, products, and services."
+    title: "Review What Works"
+    description: "Track replies, bookmarks, profile visits, and follows instead of chasing vanity metrics."
   - icon: "🔥"
-    title: "Master the Algorithm"
-    description: "Understand how X (Twitter)'s algorithm works and optimize your content for maximum reach."
+    title: "Understand Distribution"
+    description: "Think clearly about relevance, timing, early replies, and audience fit."
   - icon: "✍️"
-    title: "Perfect Your Craft"
-    description: "Develop your unique voice and writing style that stands out in a crowded feed."
+    title: "Improve Your Craft"
+    description: "Practice with examples, before/after rewrites, and realistic publishing routines."
 ---
 
 <!-- Hero Section -->
 <section class="hero">
   <div class="container">
     <div class="hero-content">
-      <h1>Write Tweets That Go Viral</h1>
-      <p>Learn the proven strategies, psychology, and techniques behind viral content on X (X (Twitter)). Grow your audience and make an impact.</p>
+      <h1>Write Clearer Posts on X</h1>
+      <p>Practical guides for hooks, threads, engagement, profile positioning, and analytics. No follower guarantees, just better writing systems.</p>
       <div class="hero-cta">
-        <a href="/tips/" class="btn btn-primary">Get Started</a>
-        <a href="/blog/" class="btn btn-secondary">Read Blog</a>
+        <a href="/blog/" class="btn btn-primary">Start Reading</a>
+        <a href="/editorial-policy/" class="btn btn-secondary">Editorial Standards</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Ad Slot - Top -->
-<div class="container">
-  <div class="ad-slot ad-slot-top">
-    <div>
-      <p class="ad-label">Advertisement</p>
-      <p>Google AdSense - Leaderboard (970x90)</p>
-    </div>
-  </div>
-</div>
-
 <!-- Features Section -->
 <section class="section">
   <div class="container">
     <div class="section-title">
-      <h2>Why Learn Viral Tweet Writing?</h2>
-      <p>X (Twitter) is one of the most powerful platforms for building influence, sharing ideas, and growing your personal brand.</p>
+      <h2>What This Site Helps With</h2>
+      <p>Use these guides to make your posts easier to read, easier to discuss, and easier to improve over time.</p>
     </div>
     
     {% set grid_html %}
@@ -71,15 +61,47 @@ features:
 </section>
 
 <!-- Latest Blog Posts -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Start Here</h2>
+      <p>Choose the guide that matches the problem you are solving today.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Write Better Hooks</h3>
+        <p>Learn first-line patterns that create curiosity and still deliver on the promise.</p>
+        <a href="/blog/5-tweet-hooks-that-stop-the-scroll/" class="tool-link">Open hook guide →</a>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <h3>Fix Low Engagement</h3>
+        <p>Diagnose weak topics, unclear formatting, poor timing, and profile mismatch.</p>
+        <a href="/blog/why-your-tweets-arent-getting-engagement-and-how-to-fix-it/" class="tool-link">Run the audit →</a>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🗓️</div>
+        <h3>Build a Content System</h3>
+        <p>Plan repeatable topics, formats, and weekly review loops.</p>
+        <a href="/blog/how-to-build-a-twitter-content-calendar-that-actually-works/" class="tool-link">Build the calendar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section section-light">
   <div class="container">
     <div class="section-title">
       <h2>Latest from the Blog</h2>
-      <p>Fresh insights and strategies for writing viral tweets, updated regularly.</p>
+      <p>Recently updated guides and examples from the library.</p>
     </div>
     
     <div class="blog-grid">
-      {% for post in collections.posts %}
+      {% for post in collections.posts | slice(0, 6) %}
       <article class="blog-card">
         <div class="blog-card-image">🚀</div>
         <div class="blog-card-content">
@@ -105,22 +127,12 @@ features:
   </div>
 </section>
 
-<!-- Ad Slot - Middle -->
-<div class="container">
-  <div class="ad-slot">
-    <div>
-      <p class="ad-label">Advertisement</p>
-      <p>Google AdSense - Responsive Ad</p>
-    </div>
-  </div>
-</div>
-
 <!-- CTA Section -->
 <section class="section" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: var(--color-white);">
   <div class="container">
     <div class="section-title">
-      <h2 style="color: var(--color-white);">Ready to Go Viral?</h2>
-      <p style="color: var(--color-gray-100);">Start implementing these strategies today and watch your X (Twitter) presence explode.</p>
+      <h2 style="color: var(--color-white);">Review Your Current Writing System</h2>
+      <p style="color: var(--color-gray-100);">Start with one guide, apply the checklist, and review what changes in your next week of posts.</p>
     </div>
     
     <div style="text-align: center;">

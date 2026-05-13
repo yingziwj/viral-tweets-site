@@ -1,124 +1,76 @@
 ---
 layout: base.njk
 title: Privacy Policy
-description: Privacy Policy for Viral Tweet Academy. Learn how we collect, use, and protect your personal information.
+description: Privacy Policy for Viral Tweet Hub, including analytics, cookies, advertising, and contact information.
 ---
 
-<section class="section">
-  <div class="container">
-    <div class="post-content">
-      <h1>Privacy Policy</h1>
-      <p><strong>Last updated:</strong> January 1, 2024</p>
-      
-      <p>Welcome to Viral Tweet Academy. We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data.</p>
+# Privacy Policy
 
-      <h2>1. Information We Collect</h2>
-      
-      <h3>Information You Provide:</h3>
-      <ul>
-        <li><strong>Newsletter subscriptions:</strong> Email address when you subscribe to our newsletter</li>
-        <li><strong>Contact forms:</strong> Name, email, and message content when you contact us</li>
-        <li><strong>Comments:</strong> Name, email, and comment content when you leave comments</li>
-      </ul>
+**Last updated:** May 13, 2026
 
-      <h3>Automatically Collected Information:</h3>
-      <ul>
-        <li><strong>Analytics data:</strong> Page views, time on site, referral sources (via Google Analytics or similar)</li>
-        <li><strong>Device information:</strong> Browser type, operating system, IP address</li>
-        <li><strong>Cookies:</strong> Small data files stored on your device (see Cookie Policy below)</li>
-      </ul>
+Viral Tweet Hub respects your privacy. This policy explains what information we collect, how we use it, and how you can contact us about privacy questions.
 
-      <h2>2. How We Use Your Information</h2>
-      
-      <p>We use the information we collect to:</p>
-      <ul>
-        <li>Provide and maintain our website</li>
-        <li>Send newsletter emails (only if you subscribe)</li>
-        <li>Respond to your inquiries and support requests</li>
-        <li>Analyze website usage to improve our content</li>
-        <li>Display relevant advertisements (via Google AdSense)</li>
-        <li>Comply with legal obligations</li>
-      </ul>
+## Information We Collect
 
-      <h2>3. Information Sharing</h2>
-      
-      <p>We do NOT sell, trade, or rent your personal information to third parties. We may share information with:</p>
-      
-      <ul>
-        <li><strong>Service providers:</strong> Hosting providers, email services, analytics providers (bound by confidentiality)</li>
-        <li><strong>Google AdSense:</strong> For advertising purposes (subject to Google's privacy policy)</li>
-        <li><strong>Legal requirements:</strong> When required by law or to protect our rights</li>
-      </ul>
+### Information you provide
 
-      <h2>4. Cookies</h2>
-      
-      <p>We use cookies to:</p>
-      <ul>
-        <li>Remember your preferences</li>
-        <li>Analyze website traffic (Google Analytics)</li>
-        <li>Display relevant ads (Google AdSense)</li>
-      </ul>
-      
-      <p>You can control cookies through your browser settings. Disabling cookies may affect website functionality.</p>
+- Email address and message content when you contact us
+- Email address if you choose to subscribe to a newsletter
+- Any optional details you include in feedback, corrections, or collaboration requests
 
-      <h2>5. Third-Party Services</h2>
-      
-      <p>Our website uses third-party services that have their own privacy policies:</p>
-      <ul>
-        <li><strong>Google Analytics:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
-        <li><strong>Google AdSense:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
-        <li><strong>Email service providers:</strong> Privacy policies vary by provider</li>
-      </ul>
+### Information collected automatically
 
-      <h2>6. Data Security</h2>
-      
-      <p>We implement reasonable security measures to protect your information, including:</p>
-      <ul>
-        <li>HTTPS encryption for data transmission</li>
-        <li>Secure hosting environments</li>
-        <li>Regular security updates</li>
-      </ul>
-      
-      <p>However, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security.</p>
+- Pages viewed, referring pages, approximate location, device type, browser, and operating system
+- Technical logs used for security, performance, and troubleshooting
+- Cookie and advertising identifiers where permitted by your browser settings and applicable law
 
-      <h2>7. Your Rights</h2>
-      
-      <p>Depending on your location, you may have the right to:</p>
-      <ul>
-        <li>Access your personal information</li>
-        <li>Correct inaccurate information</li>
-        <li>Delete your information</li>
-        <li>Opt-out of marketing communications</li>
-        <li>Data portability</li>
-      </ul>
-      
-      <p>To exercise these rights, contact us at: <a href="mailto:privacy@viraltweetacademy.com">privacy@viraltweetacademy.com</a></p>
+## How We Use Information
 
-      <h2>8. Children's Privacy</h2>
-      
-      <p>Our website is not intended for children under 13. We do not knowingly collect information from children under 13. If we learn we have collected such information, we will delete it promptly.</p>
+- To operate, maintain, and improve the website
+- To understand which guides and examples are useful to readers
+- To respond to questions, corrections, and privacy requests
+- To send newsletter emails if you subscribe
+- To detect abuse, spam, or technical problems
+- To show advertising if Google AdSense is active on the site
 
-      <h2>9. International Data Transfers</h2>
-      
-      <p>Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers.</p>
+## Cookies and Advertising
 
-      <h2>10. Changes to This Policy</h2>
-      
-      <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by posting the new policy on this page and updating the "Last updated" date.</p>
+Viral Tweet Hub may use cookies and similar technologies for analytics, site performance, and advertising. Google and its partners may use cookies or advertising identifiers to serve and measure ads. You can manage cookies in your browser settings and learn more about Google's use of advertising data at [Google Advertising Policies](https://policies.google.com/technologies/ads).
 
-      <h2>11. Contact Us</h2>
-      
-      <p>If you have questions about this Privacy Policy, please contact us:</p>
-      <ul>
-        <li><strong>Email:</strong> <a href="mailto:privacy@viraltweetacademy.com">privacy@viraltweetacademy.com</a></li>
-        <li><strong>X (Twitter):</strong> <a href="https://X.com/viraltweetacademy">@viraltweetacademy</a></li>
-      </ul>
+## Third-Party Services
 
-      <hr style="margin: var(--spacing-2xl) 0; border: none; border-top: 1px solid var(--color-gray-200);">
-      
-      <p style="color: var(--color-gray-600); font-size: var(--font-size-sm);">
-        This Privacy Policy was created with reference to GDPR, CCPA, and other privacy regulations. It is provided as a template and should be reviewed by legal counsel for your specific situation.
-      </p>
-    </div>
-  </div>
-</section>
+We may use third-party services for hosting, analytics, email, advertising, and security. These providers process information according to their own privacy policies and only as needed to provide their services.
+
+- **Google Analytics:** website measurement and usage analytics
+- **Google AdSense:** advertising delivery and measurement
+- **Hosting providers:** site delivery, logs, performance, and security
+
+## Information Sharing
+
+We do not sell your personal information. We may share limited information with service providers, when required by law, or when necessary to protect the site, readers, or our rights.
+
+## Data Retention
+
+We keep contact messages and newsletter information only as long as needed for the purpose collected, unless a longer retention period is required for legal, security, or operational reasons.
+
+## Your Choices
+
+- You can unsubscribe from newsletter emails using the unsubscribe link in those emails.
+- You can block or delete cookies through your browser settings.
+- You can request access, correction, or deletion of personal information by contacting us.
+
+## Children's Privacy
+
+This site is intended for a general audience and is not directed to children under 13. We do not knowingly collect personal information from children under 13.
+
+## International Visitors
+
+If you access the site from outside the United States, your information may be processed in countries with different data protection laws than your own.
+
+## Changes to This Policy
+
+We may update this Privacy Policy as the site, services, or legal requirements change. The updated date at the top of this page shows when the policy was last revised.
+
+## Contact
+
+For privacy questions or requests, contact us at [hello@viraltweethub.com](mailto:hello@viraltweethub.com).

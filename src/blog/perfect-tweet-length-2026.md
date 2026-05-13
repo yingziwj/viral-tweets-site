@@ -164,7 +164,7 @@ The 4-Part Viral Tweet Formula:
 3. Solution (give them the fix)
 4. Example (show it in action)
 
-Master this. Watch your engagement explode.
+Practice this, then compare the engagement quality against your usual posts.
 ```
 
 ### 2. You're Sharing Data
@@ -177,7 +177,7 @@ I analyzed 500 viral tweets (1M+ impressions each).
 90% had white space (not walls of text).
 100% provided actionable value.
 
-The pattern is clear. Copy it.
+The pattern is clear. Adapt it to your own topic and audience.
 ```
 
 ### 3. You're Starting a Thread

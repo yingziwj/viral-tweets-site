@@ -1,73 +1,49 @@
 ---
 layout: base.njk
-title: About Viral Tweet Hub - Our Story
-description: Learn why we created Viral Tweet Hub and how we help writers master the art of viral tweets on X (Twitter).
+title: About Viral Tweet Hub
+description: Learn how Viral Tweet Hub researches, writes, and reviews practical guides for creators growing on X (Twitter).
 ---
 
 # About Viral Tweet Hub
 
-## 🎯 Why This Site Exists
+Viral Tweet Hub is an independent education site for creators, writers, founders, and marketers who want to write clearer posts on X (Twitter).
 
-Let me be honest with you: **most Twitter advice is garbage.**
+The site focuses on practical writing systems: hooks, thread structure, profile positioning, publishing cadence, analytics, and examples that can be adapted without copying another creator's voice.
 
-You've probably seen it all before:
-- "Just post consistently!" (thanks, but how?)
-- "Engage with your audience!" (I have 12 followers)
-- "Go viral!" (sure, and I'll win the lottery too)
+## What We Publish
 
-After months of posting into the void and watching my tweets get ignored, I decided to take a different approach. Instead of following generic advice, I started **analyzing what actually works**.
+Our articles are built around four kinds of material:
 
-## 📊 The Data-Driven Approach
+- **Writing frameworks** that help turn rough ideas into concise posts
+- **Annotated examples** that explain why a tweet structure works
+- **Growth experiments** that show what to test and how to measure it
+- **Checklists and planning tools** for repeatable weekly publishing
 
-I analyzed hundreds of viral tweets and found something surprising: **virality isn't random**. There are patterns. Repeatable, learnable patterns.
+We avoid advice that depends on spam, engagement pods, buying followers, impersonation, or misleading claims. Sustainable audience growth comes from useful ideas, consistent publishing, and honest interaction with readers.
 
-This site is where I share what I learned:
+## Editorial Standards
 
-- **Real examples** - Not theory, actual tweets that worked
-- **Actionable frameworks** - Step-by-step guides you can use today
-- **No fluff** - Just practical tips that move the needle
+Every article is reviewed before publication for clarity, accuracy, usefulness, and originality. When AI tools are used to help draft or outline an article, the piece is edited by a human before it goes live. We add examples, remove generic claims, check that recommendations are actionable, and update content when platform behavior changes.
 
-## 🚀 What You'll Find Here
+We do not guarantee follower growth, engagement rates, revenue, or viral outcomes. X changes quickly, and results depend on niche, account history, offer quality, timing, and the usefulness of the ideas being shared.
 
-### Tweet Crafting
-Learn the anatomy of a viral tweet: hooks, pacing, CTAs, and the psychological triggers that make people share.
+For the full process, read our [Editorial Policy](/editorial-policy/).
 
-### Growth Strategy
-From 0 to 10K followers without buying followers or engagement pods. Just genuine, sustainable growth.
+## Independence
 
-### Content Systems
-Build a content calendar that actually works. Stop staring at a blank screen wondering what to post.
+Viral Tweet Hub is not affiliated with, endorsed by, or sponsored by X Corp, Twitter, or any social media platform. Product names and platform names are used only to describe the topic of the guides.
 
-### Algorithm Insights
-Understand how X's algorithm really works (without the conspiracy theories).
+Some pages may mention tools that help with writing, scheduling, analytics, or design. Recommendations are based on fit for the workflow described on the page, not on paid placement.
 
-## 💡 Who This Is For
+## Contact
 
-This site is for:
-- **Writers** who want to build an audience
-- **Creators** tired of posting into the void
-- **Entrepreneurs** using X for business growth
-- **Anyone** who believes they have something valuable to say
+Questions, corrections, collaboration ideas, or content feedback are welcome.
 
-## 🙏 A Note on AI Content
+- **Email:** [hello@viraltweethub.com](mailto:hello@viraltweethub.com)
+- **X (Twitter):** [@viraltweethub](https://x.com/viraltweethub)
 
-Full transparency: some articles on this site use AI assistance. But here's the thing—**every piece is reviewed, edited, and validated against real data**. I'd rather give you helpful content generated with AI than unhelpful content written entirely by a human.
+## Start Here
 
-The goal isn't to trick you. It's to help you write better tweets.
+New to the site? Begin with the [Tweet Hooks Guide](/blog/5-tweet-hooks-that-stop-the-scroll/) or the [30-Day Twitter Growth Plan](/blog/30-day-twitter-growth-plan/).
 
-## 📬 Let's Connect
-
-Have a question? Want to share your results? I'd love to hear from you.
-
-- **X (Twitter):** [@YourHandle](https://x.com/yourhandle) _(add your handle)_
-- **Email:** hello@viraltweethub.pages.dev
-
-## 🎁 Free Resource
-
-Want to get started right now? Check out our [Tweet Hooks Guide](/blog/5-tweet-hooks-that-stop-the-scroll) - 5 proven hooks you can use today.
-
----
-
-*Last updated: March 2026*
-
-*Viral Tweet Hub is independent and not affiliated with X Corp or Twitter.*
+*Last updated: May 13, 2026*

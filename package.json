@@ -4,7 +4,7 @@
   "description": "A complete static website about writing viral tweets on X (Twitter)",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
+    "build": "npm run clean && eleventy",
     "start": "eleventy --serve",
     "clean": "rm -rf _site"
   },
@@ -16,7 +16,7 @@
     "eleventy",
     "static site"
   ],
-  "author": "Viral Tweet Academy",
+  "author": "Viral Tweet Hub Team",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

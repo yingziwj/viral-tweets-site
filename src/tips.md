@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Tips
-description: Essential tips and strategies for writing viral tweets on X (X (Twitter)). Learn from proven techniques used by top creators.
+description: Essential tips and strategies for writing viral tweets on X (Twitter). Learn from proven techniques used by top creators.
 ---
 
 <section class="section">
@@ -73,16 +73,6 @@ description: Essential tips and strategies for writing viral tweets on X (X (Twi
         <p>Analyze what's working for others. Save tweets that perform well. Identify patterns: hooks, formatting, timing, topics. Don't copy—learn and adapt to your voice.</p>
       </div>
       
-    </div>
-  </div>
-</div>
-
-<!-- Ad Slot -->
-<div class="container">
-  <div class="ad-slot">
-    <div>
-      <p class="ad-label">Advertisement</p>
-      <p>Google AdSense - Responsive Ad</p>
     </div>
   </div>
 </div>

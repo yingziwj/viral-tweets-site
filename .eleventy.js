@@ -14,9 +14,12 @@ module.exports = function(eleventyConfig) {
   
   // Create collections for blog posts
   eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/blog/*.md").sort((a, b) => {
-      return new Date(b.date) - new Date(a.date);
-    });
+    return collectionApi
+      .getFilteredByGlob("src/blog/*.md")
+      .filter((post) => !post.data.draft)
+      .sort((a, b) => {
+        return new Date(b.date) - new Date(a.date);
+      });
   });
   
   // Date filter
@@ -26,6 +29,10 @@ module.exports = function(eleventyConfig) {
       month: 'long',
       day: 'numeric'
     });
+  });
+
+  eleventyConfig.addFilter("htmlDateString", function(date) {
+    return new Date(date).toISOString().split("T")[0];
   });
   
   // Excerpt filter

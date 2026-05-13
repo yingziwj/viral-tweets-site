@@ -221,16 +221,6 @@ description: Real examples of viral tweets analyzed and broken down. Learn what 
   </div>
 </section>
 
-<!-- Ad Slot -->
-<div class="container">
-  <div class="ad-slot">
-    <div>
-      <p class="ad-label">Advertisement</p>
-      <p>Google AdSense - Responsive Ad</p>
-    </div>
-  </div>
-</div>
-
 <!-- CTA Section -->
 <section class="section section-light">
   <div class="container">

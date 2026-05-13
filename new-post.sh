@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ============================================
-# Viral Tweet Academy - Daily Content Script
+# Viral Tweet Hub - Editorial Draft Script
 # ============================================
 # This script helps you create and publish new blog posts quickly
 # 
@@ -33,11 +33,15 @@ fi
 # Create the new post file with template
 cat > "$FILE_PATH" << EOF
 ---
+layout: base.njk
 title: "$1"
 date: ${DATE}
 description: "Write a compelling description for SEO (150-160 characters)"
 readingTime: "5 min read"
 emoji: "🚀"
+draft: true
+permalink: false
+eleventyExcludeFromCollections: true
 ---
 
 <!-- Write your content here in Markdown -->
@@ -64,7 +68,7 @@ Summarize key takeaways and include a call-to-action...
 
 ---
 
-**Found this useful?** Follow [@viraltweetacademy](https://twitter.com/viraltweetacademy) for daily tips.
+**Found this useful?** Follow [@viraltweethub](https://x.com/viraltweethub) for daily tips.
 
 **Questions?** Drop them in the replies!
 EOF

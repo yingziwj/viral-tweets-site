@@ -1,5 +1,5 @@
 /* ========================================
-   Viral Tweet Academy - Main Stylesheet
+   Viral Tweet Hub - Main Stylesheet
    ======================================== */
 
 /* CSS Variables */
@@ -465,41 +465,6 @@ ul, ol {
   color: var(--color-gray-600);
   line-height: 1.7;
   flex-grow: 1;
-}
-
-/* ========================================
-   Ad Slots
-   ======================================== */
-.ad-slot {
-  background: var(--color-gray-100);
-  border: 1px dashed var(--color-gray-300);
-  border-radius: var(--radius-md);
-  padding: var(--spacing-lg);
-  margin: var(--spacing-xl) 0;
-  text-align: center;
-  min-height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-gray-500);
-  font-size: var(--font-size-sm);
-}
-
-.ad-slot-top {
-  max-width: 970px;
-  margin: var(--spacing-xl) auto;
-}
-
-.ad-slot-sidebar {
-  margin: var(--spacing-lg) 0;
-}
-
-.ad-label {
-  font-size: var(--font-size-xs);
-  color: var(--color-gray-400);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: var(--spacing-sm);
 }
 
 /* ========================================
@@ -1183,7 +1148,6 @@ ul, ol {
 @media print {
   .site-header,
   .site-footer,
-  .ad-slot,
   .btn {
     display: none !important;
   }

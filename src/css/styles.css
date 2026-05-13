@@ -593,6 +593,19 @@ ul, ol {
   color: var(--color-gray-700);
 }
 
+.article-review-note {
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-gray-200);
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
+}
+
+.article-review-note a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
 .post-content ul li {
   list-style: disc;
 }

@@ -146,9 +146,10 @@ If you're overwhelmed, start here:
 ## Tools That Help
 
 - **Typefully** — Schedule tweets with optimal timing suggestions
-- **Hypefury** — Auto-retweet your old content during dead hours
 - **X (Twitter) Analytics** — Free, built-in, actually useful
-- **TweetHunter** — Best time predictor based on YOUR historical data
+- **Buffer or another scheduler** — Test repeatable posting windows without manual reminders
+- **Google Sheets** — Track posting time, topic, impressions, replies, and saves in one place
+- **Your scheduler's analytics export** — Compare timing patterns against your own historical results
 
 ---
 

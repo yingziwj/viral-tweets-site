@@ -400,13 +400,13 @@ Keep content type consistent (compare threads to threads, quick hits to quick hi
 
 **Typefully (Free + Paid)**
 - Schedule tweets
-- Best time suggestions based on YOUR data
+- Timing suggestions based on your data
 - Thread writing features
 
-**Hypefury (Paid)**
-- Auto-plug your best tweets
-- Schedule + analytics
-- Good for serious creators
+**Buffer or another scheduler**
+- Plan repeatable posting windows
+- Compare scheduled posts against native analytics
+- Useful once you publish several times per week
 
 ### ❌ Skip These
 

@@ -74,7 +74,7 @@ Examples:
 
 You need:
 1. **Content calendar** (Google Sheets or Notion)
-2. **Tweet scheduler** (Typefully, Hypefury, or Twitter native)
+2. **Tweet scheduler** (Typefully, Buffer, or X native scheduling)
 3. **Idea capture** (Notes app, voice memos, whatever works)
 
 ---
@@ -309,8 +309,8 @@ If "5 tips for X" performed well:
 
 **Tools:**
 - Typefully (free tier available)
-- Hypefury
-- Twitter native scheduler
+- Buffer or another lightweight scheduler
+- X native scheduler
 
 ---
 

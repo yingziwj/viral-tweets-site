@@ -10,7 +10,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
   eleventyConfig.addPassthroughCopy("src/ads.txt");
-  eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("assets/favicon.svg");
+  eleventyConfig.addPassthroughCopy("assets/favicon-16x16.png");
+  eleventyConfig.addPassthroughCopy("assets/favicon-32x32.png");
+  eleventyConfig.addPassthroughCopy("assets/favicon-512x512.png");
+  eleventyConfig.addPassthroughCopy("assets/apple-touch-icon.png");
   
   // Create collections for blog posts
   eleventyConfig.addCollection("posts", function(collectionApi) {

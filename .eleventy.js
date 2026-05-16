@@ -52,6 +52,33 @@ module.exports = function(eleventyConfig) {
     if (!arr) return [];
     return arr.slice(start, end);
   });
+
+  // Related posts filter - score by tag overlap
+  eleventyConfig.addFilter("relatedPosts", function(posts, currentTags, currentUrl, limit) {
+    if (limit === undefined) limit = 4;
+    if (!Array.isArray(currentTags) || currentTags.length === 0) return [];
+    var scored = [];
+    for (var i = 0; i < posts.length; i++) {
+      var p = posts[i];
+      if (p.url === currentUrl) continue;
+      var postTags = p.data.tags || [];
+      var overlap = 0;
+      for (var j = 0; j < postTags.length; j++) {
+        if (currentTags.indexOf(postTags[j]) !== -1) overlap++;
+      }
+      if (overlap > 0) {
+        scored.push({ post: p, score: overlap });
+      }
+    }
+    scored.sort(function(a, b) { return b.score - a.score; });
+    return scored.slice(0, limit).map(function(s) { return s.post; });
+  });
+
+  // RSS date filter (RFC 2822)
+  eleventyConfig.addFilter("rssDate", function(date) {
+    if (!date) return "";
+    return new Date(date).toUTCString();
+  });
   
   return {
     dir: {

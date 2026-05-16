@@ -1,0 +1,18 @@
+{% set relatedPosts = collections.posts | relatedPosts(tags, page.url, 4) %}
+{% if relatedPosts.length > 0 %}
+<section class="related-posts">
+  <h2 class="related-posts-title">You Might Also Like</h2>
+  <div class="related-posts-grid">
+    {% for post in relatedPosts %}
+    <article class="related-post-card">
+      <div class="related-post-emoji">{{ post.data.emoji or '📝' }}</div>
+      <h3 class="related-post-title">{{ post.data.title }}</h3>
+      <p class="related-post-meta">{{ post.date | dateFormat }}</p>
+      <a href="{{ post.url }}" class="related-post-link">
+        Read More <span>&rarr;</span>
+      </a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

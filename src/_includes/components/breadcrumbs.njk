@@ -1,0 +1,24 @@
+{% if page.url and '/blog/' in page.url %}
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+  <ol class="breadcrumbs-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li class="breadcrumbs-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1">
+    </li>
+    {% if page.url != '/blog/' %}
+    <li class="breadcrumbs-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/blog/" itemprop="item"><span itemprop="name">Blog</span></a>
+      <meta itemprop="position" content="2">
+    </li>
+    <li class="breadcrumbs-item breadcrumbs-item--current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+      <span itemprop="name">{{ title or "Untitled" }}</span>
+      <meta itemprop="position" content="3">
+    </li>
+    {% else %}
+    <li class="breadcrumbs-item breadcrumbs-item--current" aria-current="page">
+      <span>Blog</span>
+    </li>
+    {% endif %}
+  </ol>
+</nav>
+{% endif %}

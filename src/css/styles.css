@@ -1164,9 +1164,111 @@ ul, ol {
   .btn {
     display: none !important;
   }
-  
+
   body {
     font-size: 12pt;
     line-height: 1.5;
   }
+}
+
+/* ========================================
+   Breadcrumb Navigation
+   ======================================== */
+.breadcrumbs {
+  padding: 1rem 0 0;
+  font-size: var(--font-size-sm);
+}
+
+.breadcrumbs-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs-item + .breadcrumbs-item::before {
+  content: "/";
+  color: var(--color-gray-400);
+  margin-right: 0.5rem;
+}
+
+.breadcrumbs-item a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.breadcrumbs-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs-item--current {
+  color: var(--color-gray-600);
+}
+
+/* ========================================
+   Related Posts
+   ======================================== */
+.related-posts {
+  margin-top: var(--spacing-3xl);
+  padding-top: var(--spacing-2xl);
+  border-top: 2px solid var(--color-gray-200);
+}
+
+.related-posts-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-gray-900);
+}
+
+.related-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.related-post-card {
+  background: var(--color-gray-50);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  transition: box-shadow var(--transition-base);
+}
+
+.related-post-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.related-post-emoji {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.related-post-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-gray-900);
+}
+
+.related-post-meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  margin-bottom: var(--spacing-sm);
+}
+
+.related-post-link {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.related-post-link:hover {
+  gap: var(--spacing-sm);
 }

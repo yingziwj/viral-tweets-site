@@ -53,7 +53,7 @@
 
 ### 第 7 步：输入网站信息
 
-1. **Website URL:** `https://viral-tweets-site.pages.dev`
+1. **Website URL:** `https://viraltweethub.com`
 2. **Stream name:** `Viral Tweet Hub`
 3. 点击 **"Create stream"**
 
@@ -128,7 +128,7 @@ Cloudflare Pages 会自动重新部署（约 1-2 分钟）。
 
 ### 方法 1：Realtime 报告
 
-1. 打开你的网站：https://viral-tweets-site.pages.dev
+1. 打开你的网站：https://viraltweethub.com
 2. 在 Google Analytics 后台，点击 **"Reports"** → **"Realtime"**
 3. 应该能看到至少 1 个活跃用户（你自己）
 

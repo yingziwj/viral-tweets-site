@@ -10,9 +10,9 @@ cd "/Volumes/Extreme SSD/openclaw/webBot/viral-tweets-site"
 # Initialize Git (already done)
 git init
 
-# Add Cloudflare Pages domain to site config
+# Add the live domain to site config
 # Edit src/_data/site.json and update:
-# "url": "https://viraltweethub.pages.dev"
+# "url": "https://viraltweethub.com"
 
 # Create GitHub repository
 # Go to github.com/new and create: viral-tweets-site
@@ -57,13 +57,13 @@ https://viral-tweets-site-xxxx.pages.dev
 
 ### Step 4: Customize Domain (Optional)
 
-To use `viraltweethub.pages.dev`:
+To use `viraltweethub.com`:
 
 1. Go to Cloudflare Pages dashboard
 2. Select your project
 3. Go to "Custom domains"
 4. Click "Add custom domain"
-5. Enter: `viraltweethub.pages.dev`
+5. Enter: `viraltweethub.com`
 6. Follow DNS configuration steps
 
 ---
@@ -113,7 +113,7 @@ tail -f cron-log.txt
    - Sign in with Google account
 
 2. **Add Your Site:**
-   - Enter URL: `https://viraltweethub.pages.dev`
+   - Enter URL: `https://viraltweethub.com`
    - Select language: English
 
 3. **Add AdSense Code:**

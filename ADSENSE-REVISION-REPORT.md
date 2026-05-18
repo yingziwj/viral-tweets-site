@@ -153,7 +153,7 @@ We believe the website now meets AdSense quality standards and provides
 genuine value to visitors.
 
 Publisher ID: pub-3833673520933536
-Website: https://viraltweethub.pages.dev
+Website: https://viraltweethub.com
 
 Thank you for reconsideration.
 
@@ -180,8 +180,8 @@ Viral Tweet Hub Team
 ## 📞 联系信息
 
 **发布商 ID:** pub-3833673520933536  
-**网站:** https://viraltweethub.pages.dev  
-**联系邮箱:** hello@viraltweethub.pages.dev  
+**网站:** https://viraltweethub.com  
+**联系邮箱:** hello@viraltweethub.com  
 
 ---
 

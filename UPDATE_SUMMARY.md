@@ -54,7 +54,7 @@
    - Time zone: `China Standard Time`
 
 3. **创建 Web Stream：**
-   - Website URL: `https://viral-tweets-site.pages.dev`
+   - Website URL: `https://viraltweethub.com`
    - 获取 Measurement ID（格式：`G-XXXXXXXXXX`）
 
 4. **填入配置：**
@@ -91,7 +91,7 @@ git push
 
 1. ✅ 检测到新的 commit
 2. ✅ 自动运行 `npm run build`
-3. ✅ 部署到 `https://viral-tweets-site.pages.dev`
+3. ✅ 部署到 `https://viraltweethub.com`
 4. ✅ 全球 CDN 分发（约 1-2 分钟）
 
 **查看部署状态：**
@@ -104,7 +104,7 @@ https://pages.cloudflare.com → 选择你的项目 → Deployments
 ### 立即可做
 
 1. **访问网站查看效果：**
-   https://viral-tweets-site.pages.dev
+   https://viraltweethub.com
 
 2. **测试不同设备：**
    - 用手机打开

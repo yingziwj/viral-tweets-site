@@ -177,7 +177,7 @@ The site will be available at `http://localhost:8080`
 
 4. **Your site will be live at:**
    ```
-   https://viral-tweets-site.pages.dev
+   https://viraltweethub.com
    ```
 
 ---
@@ -647,8 +647,8 @@ MIT License - Feel free to use this for personal or commercial projects.
 **Questions?** 
 
 - Check existing issues on GitHub
-- Contact: hello@viraltweetacademy.com
-- Twitter: [@viraltweetacademy](https://twitter.com/viraltweetacademy)
+- Contact: hello@viraltweethub.com
+- X (Twitter): [@viraltweethub](https://x.com/viraltweethub)
 
 ---
 

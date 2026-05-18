@@ -245,7 +245,7 @@ update_state "publishedTitles" "$POST_TITLE"
 
 3. **检查网站实际效果:**
    ```bash
-   curl https://viral-tweets-site.pages.dev/blog/ | grep -A5 "blog-card"
+   curl https://viraltweethub.com/blog/ | grep -A5 "blog-card"
    ```
 
 4. **查看日志:**

@@ -2,7 +2,7 @@
 
 ## Your Site Info
 - **Name:** Viral Tweet Hub
-- **Domain:** `viraltweethub.pages.dev`
+- **Domain:** `viraltweethub.com`
 - **Location:** `/Volumes/Extreme SSD/openclaw/webBot/viral-tweets-site`
 
 ---
@@ -61,10 +61,10 @@ git push -u origin main
 1. In Cloudflare Pages dashboard, select your project
 2. Go to **"Custom domains"**
 3. Click **"Add custom domain"**
-4. Enter: `viraltweethub.pages.dev`
+4. Enter: `viraltweethub.com`
 5. Cloudflare will configure DNS automatically
 
-✅ Done! Your site is live at `https://viraltweethub.pages.dev`
+✅ Done! Your site is live at `https://viraltweethub.com`
 
 ---
 
@@ -140,7 +140,7 @@ crontab -l
 - [ ] Code pushed to GitHub
 - [ ] Cloudflare Pages project created
 - [ ] Site builds successfully
-- [ ] Custom domain configured (`viraltweethub.pages.dev`)
+- [ ] Custom domain configured (`viraltweethub.com`)
 - [ ] Cron jobs verified
 - [ ] First automated post generated
 - [ ] Analytics enabled in Cloudflare
